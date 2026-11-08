@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encomendar na Vitrine Armazém</title>
+<meta name="description" content="Conte o que você procura e o Armazém do Agro encontra pra você.">
+<style>
+  :root { --fundo:#F4F6F8; --cartao:#ffffff; --texto:#1D2329; --sec:#5B6570; --linha:#D9DEE3; --azul:#0E4D8A; --verde:#1F7A3A; --erro:#C0392B; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fundo:#121417; --cartao:#1E2226; --texto:#E8EAED; --sec:#9AA3AB; --linha:#33393F; --azul:#5B9BD9; --verde:#2E9E52; --erro:#E57368; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--fundo); color:var(--texto); font-family:Arial, sans-serif; }
+  .topo { background:#0E4D8A; color:#fff; padding:16px; }
+  .topo h1 { margin:0; font-size:20px; }
+  .topo p { margin:4px 0 0; font-size:14px; opacity:.9; }
+  .box { max-width:560px; margin:0 auto; padding:12px; }
+  .voltar { display:inline-block; margin:4px 0 8px; color:var(--sec); text-decoration:none; font-size:15px; }
+  .cartao { background:var(--cartao); border:1px solid var(--linha); border-radius:12px; padding:14px; margin-bottom:12px; }
+  .cartao h2 { margin:0 0 10px; font-size:17px; color:var(--azul); display:flex; justify-content:space-between; align-items:center; }
+  label { display:block; font-size:14px; margin:10px 0 4px; }
+  label small { color:var(--sec); }
+  input, select, textarea { width:100%; padding:11px; border:1px solid var(--linha); border-radius:8px; font-size:16px;
+    background:var(--cartao); color:var(--texto); font-family:inherit; }
+  textarea { min-height:70px; }
+  .dupla { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .dupla label { margin-top:10px; }
+  .remover { background:none; border:0; color:var(--erro); font-size:14px; cursor:pointer; }
+  .fotos { display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+  .fotos img { width:80px; height:80px; object-fit:cover; border-radius:8px; border:1px solid var(--linha); }
+  .btfoto { display:inline-block; padding:10px 14px; border:1px dashed var(--azul); color:var(--azul); border-radius:8px; cursor:pointer; font-size:15px; }
+  .btfoto input { display:none; }
+  .bt { width:100%; padding:15px; border-radius:10px; font-size:17px; cursor:pointer; border:0; }
+  .bt.add { background:transparent; border:1px solid var(--azul); color:var(--azul); margin-bottom:12px; }
+  .bt.enviar { background:var(--verde); color:#fff; }
+  .bt:disabled { opacity:.6; }
+  .msg { text-align:center; font-size:15px; margin:12px 0; }
+  .msg.erro { color:var(--erro); }
+  .ok { text-align:center; padding:24px 12px; }
+  .ok h2 { color:var(--verde); }
+  .armadilha { position:absolute; left:-9999px; }
+</style>
+</head>
+<body>
+<div class="topo">
+  <h1>Encomendar</h1>
+  <p>Conte o que você procura que a gente encontra pra você.</p>
+</div>
+
+<div class="box" id="tela">
+  <a class="voltar" href="/">← Voltar à vitrine</a>
+
+  <div class="cartao">
+    <h2>O que você procura</h2>
+    <label>Descreva a máquina ou peça <small>(modelo, potência, medidas)</small></label>
+    <textarea id="eDesc" placeholder="Ex.: Trator 75 a 90cv, 4x4, cabinado"></textarea>
+    <div class="dupla">
+      <div><label>Categoria</label><select id="eCat"><option value="">Selecione</option></select></div>
+      <div><label>Novo ou usado</label><select id="eCond"><option>Tanto faz</option><option>Novo</option><option>Usado</option></select></div>
+    </div>
+    <label>Marca <small>(se tiver preferência)</small></label>
+    <input id="eMarca">
+    <div class="dupla">
+      <div><label>Quanto pretende pagar por unidade (R$)</label><input id="eValor" inputmode="decimal"></div>
+      <div><label>Quantidade</label><input id="eQtd" inputmode="numeric" value="1"></div>
+    </div>
+    <label>Observações <small>(opcional)</small></label>
+    <textarea id="eObs"></textarea>
+  </div>
+
+  <div class="cartao">
+    <h2>Seus dados</h2>
+    <label>Seu nome</label>
+    <input id="vNome" autocomplete="name">
+    <label>Seu WhatsApp (com DDD)</label>
+    <input id="vTel" type="tel" inputmode="tel" placeholder="(17) 99999-9999" autocomplete="tel">
+    <label>Sua cidade / região</label>
+    <input id="vCidade">
+    <label>Como conheceu a Vitrine?</label>
+    <select id="vComo">
+      <option value="">Selecione</option>
+      <option>Rádio</option><option>Instagram</option><option>Facebook</option><option>Google</option>
+      <option>WhatsApp</option><option>Indicação</option><option>Já sou cliente</option><option>Outro</option>
+    </select>
+    <input class="armadilha" id="site" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button class="bt enviar" id="btEnviar" type="button">Enviar encomenda</button>
+  <p class="msg" id="msg"></p>
+</div>
+
+<script>
+  const API = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+  const CHAVE = 'anunciar_vendedor';
+  const $ = id => document.getElementById(id);
+
+  function carregar() {
+    let v = {};
+    try { v = JSON.parse(localStorage.getItem(CHAVE) || '{}'); } catch (e) {}
+    const q = new URLSearchParams(location.search);
+    if (q.get('nome')) v.nome = q.get('nome');
+    if (q.get('tel')) v.tel = q.get('tel');
+    if (q.get('cidade')) v.cidade = q.get('cidade');
+    $('vNome').value = v.nome || ''; $('vTel').value = v.tel || ''; $('vCidade').value = v.cidade || '';
+    if (v.comoConheceu) $('vComo').value = v.comoConheceu;
+  }
+  function erro(t) { const m = $('msg'); m.className = 'msg erro'; m.textContent = t; }
+
+  async function enviar() {
+    const nome = $('vNome').value.trim(), tel = $('vTel').value.trim();
+    if (!$('eDesc').value.trim()) return erro('Conte o que você procura.');
+    if (!nome || tel.replace(/\D/g, '').length < 10) return erro('Preencha seu nome e o WhatsApp com DDD.');
+    const bt = $('btEnviar'); bt.disabled = true; bt.textContent = 'Enviando…';
+    $('msg').textContent = '';
+    try {
+      const r = await fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ acao: 'encomendar', site: $('site').value, campos: {
+          'Seu nome': nome, 'Seu WhatsApp (com DDD)': tel, 'Cidade / região': $('vCidade').value.trim(),
+          'Categoria': $('eCat').value, 'Novo ou usado': $('eCond').value, 'Marca (se tiver preferência)': $('eMarca').value.trim(),
+          'O que você procura': $('eDesc').value.trim(), 'Quanto pretende pagar por unidade (R$)': $('eValor').value.trim(),
+          'Quantidade': $('eQtd').value.trim(), 'Observações': $('eObs').value.trim(), 'Como conheceu a Vitrine?': $('vComo').value
+        }})
+      });
+      const res = await r.json();
+      if (!res.ok) throw new Error(res.erro || 'erro');
+      let c = {}; try { c = JSON.parse(localStorage.getItem(CHAVE) || '{}'); } catch (e) {}
+      c.nome = nome; c.tel = tel; c.cidade = $('vCidade').value.trim(); c.comoConheceu = $('vComo').value;
+      try { localStorage.setItem(CHAVE, JSON.stringify(c)); } catch (e) {}
+      $('tela').innerHTML = '<div class="cartao ok"><h2>✅ Encomenda recebida!</h2>' +
+        '<p>Vamos procurar e te chamar no WhatsApp.</p>' +
+        '<button class="bt enviar" onclick="location.reload()">Encomendar outra coisa</button>' +
+        '<p><a class="voltar" href="/">← Voltar à vitrine</a></p></div>';
+      window.scrollTo(0, 0);
+    } catch (e) {
+      bt.disabled = false; bt.textContent = 'Enviar encomenda';
+      erro('Não consegui enviar (' + e.message + '). Confira a internet e tente de novo.');
+    }
+  }
+
+  $('btEnviar').addEventListener('click', enviar);
+  carregar();
+  fetch(API + '?acao=listasAnunciar', { credentials: 'omit' })
+    .then(r => r.json())
+    .then(d => { $('eCat').innerHTML = '<option value="">Selecione</option>' + (d.categorias || []).map(c => '<option>' + c.nome.replace(/</g, '&lt;') + '</option>').join(''); })
+    .catch(() => {});
+</script>
+</body>
+</html>

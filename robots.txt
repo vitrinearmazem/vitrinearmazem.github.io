@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /anuncio.html
+Disallow: /envio.html
+Disallow: /confirmar.html
+
+Sitemap: https://vitrinearmazem.com.br/sitemap.xml

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Envio da confirmação semanal</title>
+<link rel="icon" href="icon-192.png">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#F3F4F1;color:#1D2329}
+header{background:#0E4D8A;color:#fff;padding:16px}header h1{margin:0;font-size:20px}header p{margin:4px 0 0;color:#C9DCEF;font-size:14px}
+main{max-width:620px;margin:0 auto;padding:14px}
+.l{background:#fff;border:1px solid #E1E4E0;border-radius:12px;padding:12px;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.l .t{flex:1;min-width:0}.l b{display:block}.l small{color:#5B6570;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.l a{background:#1F7A3A;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:bold;white-space:nowrap}
+.l a.feito{background:#9AA3AB}
+.l span{color:#B42318;font-size:13px}
+.msg{text-align:center;padding:40px 10px;color:#5B6570}
+</style>
+</head>
+<body>
+<header><h1>Confirmação semanal</h1><p>Toque em Enviar em cada anunciante. Abre o WhatsApp com a mensagem pronta.</p></header>
+<main id="m"><div class="msg">Carregando…</div></main>
+<script>
+const URL_DADOS = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+const K = new URLSearchParams(location.search).get('k') || '';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const m = document.getElementById('m');
+fetch(URL_DADOS + '?acao=painelEnvio&k=' + encodeURIComponent(K)).then(r => r.json()).then(d => {
+  if (d.erro) { m.innerHTML = '<div class="msg">Link inválido.</div>'; return; }
+  if (!d.lista.length) { m.innerHTML = '<div class="msg">Nenhum anunciante com itens ativos.</div>'; return; }
+  m.innerHTML = d.lista.map(x => '<div class="l"><div class="t"><b>' + esc(x.nome) + ' (' + x.qtd + ')</b><small>' + esc(x.itens) + '</small></div>' +
+    (x.wa ? '<a href="' + esc(x.wa) + '" target="_blank" onclick="this.classList.add(\'feito\');this.textContent=\'Enviado\'">Enviar</a>' : '<span>sem telefone</span>') + '</div>').join('');
+}).catch(() => { m.innerHTML = '<div class="msg">Sem conexão. Tente de novo.</div>'; });
+</script>
+</body>
+</html>

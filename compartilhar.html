@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Compartilhar oferta</title>
+<style>
+  :root { --fundo:#ffffff; --texto:#1D2329; --caixa:#F4F6F8; --verde:#1F7A3A; --cinza:#5B6570; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fundo:#121417; --texto:#E8EAED; --caixa:#1E2226; --verde:#2E9E52; --cinza:#9AA3AB; }
+  }
+  body { margin:0; background:var(--fundo); color:var(--texto); font-family:Arial, sans-serif; }
+  .box { max-width:480px; margin:0 auto; padding:16px 12px 32px; }
+  img { width:100%; border-radius:10px; display:block; }
+  pre { white-space:pre-wrap; font-family:Arial, sans-serif; font-size:15px; line-height:1.5;
+        background:var(--caixa); padding:12px; border-radius:10px; margin:12px 0; }
+  button { width:100%; background:var(--verde); color:#fff; border:0; padding:16px; border-radius:10px;
+           font-size:18px; cursor:pointer; }
+  button:disabled { opacity:.5; }
+  #msg { color:var(--cinza); font-size:14px; text-align:center; margin-top:12px; }
+  textarea { position:absolute; left:-9999px; }
+  .voltar { display:inline-block; margin:4px 0 12px; color:var(--cinza); text-decoration:none; font-size:15px; }
+</style>
+</head>
+<body>
+<div class="box">
+  <a class="voltar" id="voltar" href="/">← Voltar à vitrine</a>
+  <div id="conteudo"><p id="carregando">Carregando oferta…</p></div>
+  <button id="btn" disabled>📤 Compartilhar</button>
+  <p id="msg"></p>
+  <textarea id="copia"></textarea>
+</div>
+
+<script>
+  // Endereço do app da web do Apps Script (o mesmo que o site já usa para a vitrine)
+  const API = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+
+  const n = new URLSearchParams(location.search).get('n');
+  const conteudo = document.getElementById('conteudo');
+  const btn = document.getElementById('btn');
+  const msg = document.getElementById('msg');
+  let dados = null, arquivo = null;
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+
+  function copiar() {
+    const t = document.getElementById('copia');
+    t.value = dados.texto;
+    t.select();
+    try { document.execCommand('copy'); return true; } catch (e) { return false; }
+  }
+
+  async function carregar() {
+    if (!n) { conteudo.innerHTML = '<p>Oferta não informada.</p>'; return; }
+    try {
+      const r = await fetch(API + '?acao=compartilharDados&n=' + encodeURIComponent(n), { credentials: 'omit' });
+      dados = await r.json();
+    } catch (e) {
+      conteudo.innerHTML = '<p>Não consegui carregar a oferta. Tente de novo em instantes.</p>';
+      return;
+    }
+    if (dados.erro) { conteudo.innerHTML = '<p>' + esc(dados.erro) + '</p>'; return; }
+
+    let html = '';
+    if (dados.foto) {
+      html += '<img id="foto" alt="Foto da oferta" src="data:' + dados.foto.tipo + ';base64,' + dados.foto.b64 + '">';
+      const bin = atob(dados.foto.b64);
+      const arr = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+      arquivo = new File([arr], 'oferta-' + dados.n + '.jpg', { type: dados.foto.tipo });
+    }
+    html += '<pre>' + esc(dados.texto) + '</pre>';
+    conteudo.innerHTML = html;
+    btn.disabled = false;
+  }
+
+  btn.addEventListener('click', async () => {
+    try {
+      if (arquivo && navigator.canShare && navigator.canShare({ files: [arquivo] })) {
+        copiar();
+        await navigator.share({ files: [arquivo], text: dados.texto });
+        msg.textContent = 'Pronto!';
+        return;
+      }
+      if (navigator.share) {
+        await navigator.share({ text: dados.texto });
+        msg.textContent = 'Texto enviado. A foto você pode mandar segurando o dedo nela → Compartilhar imagem.';
+        return;
+      }
+      throw new Error('sem compartilhar');
+    } catch (e) {
+      if (e && e.name === 'AbortError') return; // a pessoa cancelou
+      const ok = copiar();
+      msg.innerHTML = (ok ? '✅ Texto copiado. ' : '') +
+        'Agora segure o dedo na foto → <b>Compartilhar imagem</b> → WhatsApp, e cole o texto como legenda.';
+    }
+  });
+
+  // Voltar: se veio da vitrine, volta pra mesma oferta; senão, abre a oferta na vitrine
+  document.getElementById('voltar').addEventListener('click', ev => {
+    ev.preventDefault();
+    if (document.referrer && document.referrer.indexOf(location.host) >= 0 && history.length > 1) history.back();
+    else location.href = '/' + (n ? '#item-' + encodeURIComponent(n) : '');
+  });
+
+  carregar();
+</script>
+</body>
+</html>

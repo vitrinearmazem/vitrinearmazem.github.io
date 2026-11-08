@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Confirmar equipamentos – Vitrine Armazém</title>
+<link rel="icon" href="icon-192.png">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#0E4D8A;--verde:#1F7A3A;--verm:#B42318;--fundo:#F3F4F1;--linha:#E1E4E0;--sec:#5B6570}
+*{box-sizing:border-box}body{margin:0;font-family:Barlow,Arial,sans-serif;background:var(--fundo);color:#1D2329;font-size:16px}
+header{background:var(--azul);color:#fff;padding:16px;display:flex;gap:12px;align-items:center}
+header img{width:46px;height:46px;border-radius:9px}header h1{margin:0;font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:21px}
+header p{margin:2px 0 0;color:#C9DCEF;font-size:14px}
+main{max-width:620px;margin:0 auto;padding:14px}
+.intro{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:12px 14px;margin-bottom:12px;line-height:1.45}
+.item{background:#fff;border:1px solid var(--linha);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.top{display:flex;gap:10px;padding:10px}
+.foto{width:84px;height:84px;border-radius:10px;background:#E6E9E3 center/cover no-repeat;flex:none}
+.tit{font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:18px;font-weight:600;line-height:1.2}
+.sub{font-size:14px;color:var(--sec);margin-top:2px}
+.ops{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:0 10px 10px}
+.ops button{font:inherit;font-size:14px;padding:10px 4px;border-radius:10px;border:1px solid var(--linha);background:#fff;cursor:pointer}
+.ops button.on[data-a=ok]{background:#DDF0E2;border-color:var(--verde);color:#14532A;font-weight:500}
+.ops button.on[data-a=vendido]{background:#FDE2E2;border-color:var(--verm);color:#7F1D1D;font-weight:500}
+.ops button.on[data-a=preco]{background:#FFF1D6;border-color:#B65A0B;color:#7A3E06;font-weight:500}
+.novo{display:none;padding:0 10px 12px}.novo.on{display:block}
+.novo input{width:100%;padding:11px 12px;font:inherit;font-size:18px;border:1px solid var(--linha);border-radius:10px}
+.enviar{width:100%;padding:14px;font:inherit;font-size:17px;font-weight:500;border:0;border-radius:12px;background:var(--verde);color:#fff;cursor:pointer;margin-top:4px}
+.enviar:disabled{opacity:.5}
+.msg{text-align:center;padding:40px 16px;color:var(--sec);line-height:1.5}
+.msg b{color:#1D2329;font-size:20px;display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+<header><img src="logo.jpg" alt=""><div><h1>Vitrine Armazém</h1><p>Confirmação dos seus equipamentos</p></div></header>
+<main id="m"><div class="msg">Carregando seus equipamentos…</div></main>
+<script>
+const URL_DADOS = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+const q = new URLSearchParams(location.search), O = q.get('o') || '', K = q.get('k') || '';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const brl = v => v ? v.toLocaleString('pt-BR', {style:'currency', currency:'BRL', maximumFractionDigits:0}) : '';
+const resp = {};
+const m = document.getElementById('m');
+function erro(t) { m.innerHTML = '<div class="msg"><b>Ops!</b>' + t + '</div>'; }
+fetch(URL_DADOS + '?acao=itensOfertante&o=' + encodeURIComponent(O) + '&k=' + encodeURIComponent(K))
+  .then(r => r.json()).then(d => {
+    if (d.erro) return erro('Este link não é válido. Fale com o Vitor pelo WhatsApp.');
+    if (!d.itens.length) return erro('Você não tem equipamentos ativos na Vitrine no momento. Obrigado!');
+    const nome = (d.nome || '').split(' ')[0];
+    m.innerHTML = '<div class="intro">Olá' + (nome ? ', <b>' + esc(nome) + '</b>' : '') + '! Pra manter a Vitrine em dia, marque como está cada equipamento e toque em <b>Enviar</b> no final. Leva menos de 1 minuto. 🙏</div>' +
+      d.itens.map(i => '<div class="item" data-n="' + esc(i.n) + '"><div class="top"><div class="foto"' + (i.foto ? ' style="background-image:url(\'' + esc(i.foto) + '\')"' : '') + '></div><div>' +
+        '<div class="tit">' + esc((i.marca ? i.marca + ' ' : '') + i.desc) + '</div>' +
+        '<div class="sub">' + [i.ano, i.valor ? 'Seu valor: ' + brl(i.valor) : ''].filter(Boolean).map(esc).join(' · ') + '</div></div></div>' +
+        '<div class="ops"><button data-a="ok">✅ Disponível</button><button data-a="vendido">❌ Já vendi</button><button data-a="preco">💲 Novo preço</button></div>' +
+        '<div class="novo"><input inputmode="numeric" placeholder="Novo valor (R$)"></div></div>').join('') +
+      '<button class="enviar" id="env" disabled>Enviar confirmação</button>';
+    const total = d.itens.length;
+    m.addEventListener('click', e => {
+      const b = e.target.closest('.ops button'); if (!b) return;
+      const it = b.closest('.item'), n = it.dataset.n;
+      it.querySelectorAll('.ops button').forEach(x => x.classList.toggle('on', x === b));
+      it.querySelector('.novo').classList.toggle('on', b.dataset.a === 'preco');
+      resp[n] = {n: n, acao: b.dataset.a};
+      document.getElementById('env').disabled = Object.keys(resp).length < total;
+    });
+    m.addEventListener('input', e => {
+      if (!e.target.matches('.novo input')) return;
+      const d2 = e.target.value.replace(/\D/g, '');
+      e.target.value = d2 ? Number(d2).toLocaleString('pt-BR') : '';
+      const n = e.target.closest('.item').dataset.n;
+      if (resp[n]) resp[n].valor = Number(d2);
+    });
+    document.getElementById('env').addEventListener('click', ev => {
+      const lista = Object.values(resp);
+      if (lista.some(x => x.acao === 'preco' && !x.valor)) { alert('Digite o novo valor nos itens marcados com Novo preço.'); return; }
+      ev.target.disabled = true; ev.target.textContent = 'Enviando…';
+      fetch(URL_DADOS + '?acao=confirmarOfertante&o=' + encodeURIComponent(O) + '&k=' + encodeURIComponent(K) + '&r=' + encodeURIComponent(JSON.stringify(lista)))
+        .then(r => r.json()).then(x => {
+          if (x.erro) return erro('Não consegui registrar. Tente de novo ou fale com o Vitor.');
+          m.innerHTML = '<div class="msg"><b>Obrigado! ✅</b>Sua confirmação foi registrada. A Vitrine já está atualizada.<br><br><a href="https://vitrinearmazem.com.br" style="color:#0E4D8A;font-weight:500">Ver a Vitrine</a></div>';
+        }).catch(() => erro('Sem conexão agora. Tente de novo em instantes.'));
+    });
+  }).catch(() => erro('Sem conexão agora. Tente de novo em instantes.'));
+</script>
+</body>
+</html>

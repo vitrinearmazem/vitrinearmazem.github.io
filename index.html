@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitrine Armazém – Tratores e implementos agrícolas usados e novos em São José do Rio Preto/SP</title>
+<meta name="description" content="Tratores, implementos agrícolas e peças, novos e usados, com foto e preço. Armazém do Agro, revenda Jumil em São José do Rio Preto/SP. Compre, venda ou encomende seu equipamento.">
+<meta property="og:title" content="Vitrine Armazém – seu classificado do agro">
+<meta property="og:description" content="Tratores, implementos e peças novos e usados. Anuncie ou encontre seu equipamento com o Armazém do Agro.">
+<meta property="og:image" content="https://vitrinearmazem.com.br/logo-jumil.jpg">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="640">
+<meta property="og:url" content="https://vitrinearmazem.com.br/">
+<meta property="og:site_name" content="Vitrine Armazém">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://vitrinearmazem.com.br/">
+<meta name="theme-color" content="#0E4D8A">
+<!-- Dados da empresa para o Google (aparecem na busca e no Maps) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Armazém do Agro – Vitrine Armazém",
+  "description": "Tratores, implementos agrícolas e peças, novos e usados. Revenda oficial Jumil.",
+  "url": "https://vitrinearmazem.com.br/",
+  "logo": "https://vitrinearmazem.com.br/logo.jpg",
+  "image": "https://vitrinearmazem.com.br/logo-jumil.jpg",
+  "telephone": "+55-17-3388-0422",
+  "email": "vhplaza@msn.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Sebastião Rodrigues Goulart, 45, Sala 01 – Villa Cassini",
+    "addressLocality": "São José do Rio Preto",
+    "addressRegion": "SP",
+    "postalCode": "15057-570",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Noroeste paulista",
+  "sameAs": ["https://instagram.com/armazem.doagro"]
+}
+</script>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Vitrine Armazém">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://script.google.com">
+<link rel="preconnect" href="https://script.googleusercontent.com">
+<link rel="preconnect" href="https://drive.google.com">
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--azul:#0E4D8A;--azul2:#1A5E9E;--palha:#F3E6C8;--terra:#5A4632;--verde:#1F7A3A;--verde-cl:#DDF0E2;--laranja:#B65A0B;--laranja-cl:#FFE9D2;--fundo:#F3F4F1;--texto:#1D2329;--sec:#5B6570;--mut:#8A939B;--linha:#E1E4E0}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Barlow,Arial,sans-serif;background:var(--fundo);color:var(--texto);font-size:16px;padding-top:var(--hCab,150px);padding-bottom:calc(70px + env(safe-area-inset-bottom))}
+h1,h2,h3,.tit,.preco,.ptit{font-family:"Barlow Semi Condensed",Arial,sans-serif}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+/* cabeçalho */
+header{background:var(--azul);color:#fff;position:fixed;top:0;left:0;right:0;z-index:5;padding:10px 14px 10px;padding-top:calc(10px + env(safe-area-inset-top));transition:transform .25s ease;will-change:transform}
+header.mini{transform:translateY(calc(-1 * var(--hTopo, 0px)))}
+.topo{max-width:900px;margin:0 auto;transition:opacity .2s ease}
+header.mini .topo{opacity:0;pointer-events:none}
+.marca{display:flex;align-items:center;gap:10px}
+.marca img{width:44px;height:44px;border-radius:9px;flex:none}
+.marca h1{margin:0;font-size:21px;font-weight:600;line-height:1.1}
+.marca p{margin:1px 0 0;font-size:14px;color:#C9DCEF}
+.abas{display:flex;gap:8px;margin-top:10px}
+.abas button{flex:1;font-size:15px;font-weight:500;padding:8px 0;border-radius:10px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff}
+.abas button.on{background:#fff;color:var(--azul);border-color:#fff}
+.busca{max-width:900px;margin:10px auto 0}
+#busca{width:100%;padding:11px 14px;border-radius:10px;border:0;font:inherit;font-size:16px}
+/* filtros */
+.filtros{padding:12px 14px 2px;max-width:900px;margin:0 auto}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.chips::-webkit-scrollbar,.faixa::-webkit-scrollbar,.fotos::-webkit-scrollbar{display:none}
+.chip{flex:none;font-size:14px;padding:7px 13px;border-radius:999px;border:1px solid var(--linha);background:#fff;color:var(--sec)}
+.chip.on{background:var(--azul);border-color:var(--azul);color:#fff}
+.seg{display:flex;background:#E6E9E3;border-radius:10px;padding:3px;margin:6px 0}
+.seg button{flex:1;font-size:14px;padding:7px 0;border:0;background:none;color:var(--sec);border-radius:8px}
+.seg button.on{background:#fff;color:var(--texto);font-weight:500}
+#cont{font-size:13px;color:var(--sec);margin:4px 0 0}
+main{padding:6px 14px 10px;max-width:900px;margin:0 auto}
+.secao{font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:18px;font-weight:600;margin:12px 0 8px}
+/* destaques */
+.faixa{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scroll-snap-type:x mandatory}
+.dest{flex:none;width:270px;display:flex;background:#fff;border:1px solid var(--linha);border-radius:12px;overflow:hidden;text-align:left;padding:0;scroll-snap-align:start;color:inherit}
+.dest .f{width:100px;flex:none;background:#E6E9E3 center/cover no-repeat}
+.dest .t{padding:9px 10px;min-width:0}
+.dest .tag{font-size:12px;font-weight:500;color:var(--laranja)}
+.dest .nm{font-size:14px;font-weight:500;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.risc{font-size:12px;color:var(--mut);text-decoration:line-through}
+.dest .pr{font-size:17px;font-weight:600;color:var(--verde);font-family:"Barlow Semi Condensed",Arial,sans-serif}
+/* grade */
+.grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media(min-width:640px){.grade{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:860px){.grade{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.card{background:#fff;border:1px solid var(--linha);border-radius:12px;overflow:hidden;text-align:left;padding:0;color:inherit;display:flex;flex-direction:column}
+.ph{aspect-ratio:1/1;background:#E6E9E3 center/cover no-repeat;position:relative;width:100%}
+.selo{position:absolute;top:7px;left:7px;font-size:11px;font-weight:500;padding:3px 8px;border-radius:999px}
+.s-of{background:var(--laranja-cl);color:var(--laranja)}
+.s-bx{background:var(--verde-cl);color:#14532A}
+.s-nv{background:#DCE8F6;color:var(--azul)}
+.s-rs{background:#FDE2E2;color:#9B1C1C}
+.ci{padding:8px 9px 10px;display:flex;flex-direction:column;gap:1px}
+.ci .tit{font-size:15px;font-weight:600;line-height:1.2;min-height:36px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ci .sub{font-size:13px;color:var(--sec)}
+.ci .preco{font-size:19px;font-weight:600;color:var(--texto);margin-top:3px}
+.ci .preco.bx{color:var(--verde)}
+.ci .loc{font-size:12px;color:var(--mut)}
+/* vendidos */
+.vend{flex:none;width:130px;background:#fff;border:1px solid var(--linha);border-radius:12px;overflow:hidden}
+.vend .f{aspect-ratio:1/1;background:#E6E9E3 center/cover no-repeat;position:relative}
+.vend .f span{position:absolute;bottom:6px;left:6px;background:var(--verde);color:#fff;font-size:11px;font-weight:500;padding:2px 8px;border-radius:999px}
+.vend p{margin:0;padding:6px 8px 8px;font-size:12px;line-height:1.25;color:var(--sec);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* procura */
+.intro{background:#FFF8E6;border:1px solid #F0DDAE;color:var(--terra);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.45;margin:8px 0 12px}
+.pcard{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:12px 14px;margin-bottom:10px}
+.ptag{display:inline-block;font-size:12px;font-weight:500;padding:3px 9px;border-radius:999px;background:#FFF1D6;color:#7A5410;margin-bottom:4px}
+.ptit{font-size:18px;font-weight:600;line-height:1.2;margin:2px 0}
+.pdet{font-size:14px;color:var(--sec)}
+.pago{font-size:17px;font-weight:600;color:var(--azul);margin-top:6px;font-family:"Barlow Semi Condensed",Arial,sans-serif}
+.linha-bt{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.zap{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--verde);color:#fff;text-decoration:none;font-weight:500;padding:11px 16px;border-radius:10px;font-size:15px;border:0}
+.bt2{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#fff;color:var(--azul);border:1px solid var(--azul);text-decoration:none;font-weight:500;padding:10px 14px;border-radius:10px;font-size:15px}
+.vazio{text-align:center;padding:36px 10px;color:var(--sec)}
+.vazio a{color:var(--azul);font-weight:500}
+.carregando img{width:170px;border-radius:16px;display:block;margin:0 auto 14px}
+/* página do item */
+#pItem{display:none;position:fixed;inset:0;background:var(--fundo);z-index:20;overflow-y:auto;padding-bottom:calc(90px + env(safe-area-inset-bottom))}
+#pItem.aberto{display:block}
+.ibar{position:sticky;top:0;z-index:2;background:var(--azul);color:#fff;display:flex;align-items:center;gap:8px;padding:10px 12px;padding-top:calc(10px + env(safe-area-inset-top))}
+.ibar button{background:none;border:0;color:#fff;font-size:15px;display:flex;align-items:center;gap:6px;padding:4px 6px}
+.ibar span{font-weight:500;font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:18px}
+.iwrap{max-width:720px;margin:0 auto}
+.fotos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;background:#E6E9E3;aspect-ratio:4/3;position:relative}
+.fotos img{flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.fwrap{position:relative}
+.fcont{position:absolute;bottom:10px;right:10px;font-size:12px;background:rgba(0,0,0,.55);color:#fff;padding:3px 9px;border-radius:999px}
+.fseta{display:none;position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;background:rgba(0,0,0,.5);color:#fff;font-size:22px;line-height:42px;text-align:center;cursor:pointer;padding:0}
+.fseta:hover{background:rgba(0,0,0,.75)}
+.fseta.esq{left:10px}.fseta.dir{right:10px}
+@media (hover:hover) and (pointer:fine){.fseta{display:block}}
+.ibody{padding:14px 16px}
+.ibody .cat{font-size:13px;color:var(--sec)}
+.ibody h2{margin:2px 0 6px;font-size:24px;font-weight:600;line-height:1.15}
+.ficha{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.ficha div{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:8px 10px}
+.ficha small{display:block;font-size:12px;color:var(--mut)}
+.ficha b{font-weight:500;font-size:15px}
+.ipreco{font-size:30px;font-weight:600;color:var(--texto);font-family:"Barlow Semi Condensed",Arial,sans-serif}
+.ipreco.bx{color:var(--verde)}
+.ivalidade{font-size:14px;color:var(--laranja);font-weight:500}
+.iacoes{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--linha);padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));z-index:21;display:none}
+#pItem.aberto + .iacoes{display:block}
+.iacoes .in{max-width:720px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.iacoes .zap{grid-column:1/-1;font-size:16px;padding:13px}
+/* navegação de baixo */
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--azul);z-index:6;padding-bottom:env(safe-area-inset-bottom)}
+nav a,nav button{flex:1;text-align:center;padding:8px 2px 10px;font-size:12.5px;line-height:1.2;color:#C9DCEF;text-decoration:none;background:none;border:0;border-top:3px solid transparent}
+nav .ico{display:block;font-size:19px;line-height:1.3}
+nav .atual{color:#fff;font-weight:500;border-top-color:#fff}
+/* painéis */
+.fundo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;align-items:flex-end}
+.fundo.aberto{display:flex}
+.painel{background:#fff;width:100%;border-radius:18px 18px 0 0;padding:18px 16px calc(22px + env(safe-area-inset-bottom));max-width:640px;margin:0 auto;max-height:88vh;overflow-y:auto}
+.painel h2{margin:0 0 10px;font-size:22px;font-weight:600}
+.ct{display:block;padding:12px 0;border-bottom:1px solid var(--linha);text-decoration:none;color:var(--texto)}
+.ct b{font-weight:500;display:block}.ct span{font-size:14px;color:var(--sec)}
+.ct.dest2 b{color:var(--laranja)}
+.sobre img{width:100%;max-width:280px;display:block;margin:0 auto 14px;border-radius:14px}
+.sobre p{margin:0 0 12px;line-height:1.55}
+.sobre ul{margin:0 0 14px;padding-left:20px;line-height:1.6}
+.sobre h3{font-size:18px;font-weight:600;margin:14px 0 6px;color:var(--azul)}
+.bt-cheio{display:block;text-align:center;background:var(--azul);color:#fff;text-decoration:none;padding:12px;border-radius:10px;font-weight:500;margin-top:8px;border:0;width:100%}
+.bt-borda{display:block;text-align:center;background:#fff;color:var(--azul);border:1px solid var(--azul);text-decoration:none;padding:11px;border-radius:10px;font-weight:500;margin-top:8px;width:100%}
+.fechar{margin-top:12px;width:100%;padding:12px;border:1px solid var(--linha);background:#fff;border-radius:10px}
+.campo{width:100%;padding:13px 14px;font:inherit;font-size:20px;border:1px solid var(--linha);border-radius:10px;margin:6px 0 4px}
+.inst{text-align:center}
+.inst img{width:80px;height:80px;border-radius:18px;margin:4px auto 10px;display:block}
+.inst p{margin:0 0 12px;line-height:1.5;color:var(--sec)}
+.inst ol{text-align:left;margin:0 0 14px;padding-left:22px;line-height:1.7}
+.nao{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font-size:14px;color:var(--sec)}
+.nao input{width:18px;height:18px}
+.aviso{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#1D2329;color:#fff;padding:10px 16px;border-radius:10px;font-size:14px;z-index:40;display:none}
+:focus-visible{outline:3px solid #F2B035;outline-offset:2px}
+/* vendidos recentemente: faixa fixa acima da barra de baixo */
+#vendFixo{position:fixed;left:0;right:0;bottom:var(--hNav,64px);background:#fff;border-top:1px solid var(--linha);z-index:5;padding:6px 0 8px;transform:translateY(130%);transition:transform .25s ease;pointer-events:none}
+#vendFixo.on{transform:none;pointer-events:auto}
+.vfTit{font-size:12px;font-weight:600;color:var(--verde);padding:0 14px 4px;max-width:900px;margin:0 auto}
+.vfTrilha{overflow:hidden}
+.vfFaixa{display:flex;gap:8px;width:max-content;padding-left:14px;animation:vfAnda 45s linear infinite}
+.vfTrilha:active .vfFaixa{animation-play-state:paused}
+@keyframes vfAnda{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.vfFaixa{animation:none}}
+.vfItem{flex:none;width:92px}
+.vfItem .f{height:50px;border-radius:8px;background:#E6E9E3 center/cover no-repeat;position:relative}
+.vfItem .f span{position:absolute;left:4px;bottom:4px;background:var(--verde);color:#fff;font-size:9px;font-weight:600;padding:1px 5px;border-radius:999px}
+.vfItem p{margin:3px 0 0;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--texto)}
+body.comVend{padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+</style>
+</head>
+<body>
+<header id="cab">
+  <div class="topo">
+    <div class="marca">
+      <img src="logo.jpg" alt="Armazém do Agro">
+      <div><h1>Vitrine Armazém</h1><p>Seu classificado do agro · Rio Preto</p></div>
+    </div>
+    <div class="abas" id="abas"><button class="on" data-m="vitrine">🏪 Vitrine</button><button data-m="procura">🔎 Procura-se</button></div>
+  </div>
+  <div class="busca"><input id="busca" type="search" placeholder="Buscar: grade, Valtra, roçadeira" aria-label="Buscar equipamento"></div>
+</header>
+
+<div class="filtros">
+  <div class="chips" id="chips"></div>
+  <div class="seg" id="seg"><button class="on" data-v="">Todos</button><button data-v="Novo">Novos</button><button data-v="Usado">Usados</button></div>
+  <p id="cont"></p>
+</div>
+
+<main id="lista"><div class="vazio carregando"><img src="logo-jumil.jpg" alt="">Carregando equipamentos…</div></main>
+
+<div id="vendFixo" aria-label="Vendidos recentemente"><div class="vfTit">✅ Vendidos recentemente</div><div class="vfTrilha"><div class="vfFaixa" id="vfFaixa"></div></div></div>
+
+<nav>
+  <a class="atual" href="#" target="_self" onclick="fecharTudo();trocarModo('vitrine');window.scrollTo(0,0);return false"><span class="ico">🏪</span>Vitrine</a>
+  <button onclick="abrir('pAnunciar')"><span class="ico">📢</span>Anunciar ou encomendar</button>
+  <button onclick="abrir('pContatos')"><span class="ico">💬</span>Fale com a gente</button>
+  <button onclick="abrir('pSobre')"><span class="ico">ℹ️</span>Sobre nós</button>
+</nav>
+
+<div id="pItem"></div>
+<div class="iacoes" id="iAcoes"></div>
+
+<div class="fundo" id="pAnunciar" onclick="if(event.target===this)fecharTudo()"><div class="painel">
+  <h2>Anunciar ou encomendar</h2>
+  <div id="listaAnunciar"></div>
+  <a class="ct dest2" id="lnkVendaRapida" href="#"><b>⚡ Venda rápida: o Armazém compra</b><span>Quer vender sem esperar? Fazemos uma proposta de compra direta pelo seu equipamento.</span></a>
+  <button class="fechar" onclick="fecharTudo()">Fechar</button>
+</div></div>
+
+<div class="fundo" id="pContatos" onclick="if(event.target===this)fecharTudo()"><div class="painel">
+  <h2>Fale com a gente</h2>
+  <div id="listaContatos"></div>
+  <a class="ct" href="https://instagram.com/armazem.doagro"><b>📸 Instagram</b><span>@armazem.doagro</span></a>
+  <button class="fechar" onclick="fecharTudo()">Fechar</button>
+</div></div>
+
+<div class="fundo" id="pSobre" onclick="if(event.target===this)fecharTudo()"><div class="painel sobre">
+  <img src="logo-jumil.jpg" alt="Armazém do Agro, revenda autorizada Jumil">
+  <p><b>Armazém do Agro</b> – São José do Rio Preto, SP.<br>Soluções completas para o produtor rural.</p>
+  <h3>✅ Revenda oficial Jumil</h3>
+  <p>"Pensou plantio, pensou Jumil"</p>
+  <h3>🛠️ O que fazemos</h3>
+  <ul>
+    <li>Peças para tratores, com foco em New Holland e Case</li>
+    <li>Peças para implementos em geral</li>
+    <li>Implementos agrícolas novos e usados de todas as marcas</li>
+    <li>Compra, venda e indicação de tratores usados</li>
+    <li>Serviços e treinamentos técnicos e operacionais no campo</li>
+  </ul>
+  <p>🤝 Atendimento direto, de quem entende do campo.</p>
+  <a class="bt-cheio" id="lnkMapa" href="#">📍 Abrir rota no Google Maps</a>
+  <a class="bt-borda" href="https://instagram.com/armazem.doagro">📸 Siga no Instagram: @armazem.doagro</a>
+  <button class="bt-borda" onclick="abrirInstalar(true)">📲 Instalar a Vitrine no celular</button>
+  <button class="fechar" onclick="fecharTudo()">Fechar</button>
+</div></div>
+
+<div class="fundo" id="pCompartilhar" onclick="if(event.target===this)fecharTudo()"><div class="painel">
+  <h2>Compartilhar</h2>
+  <p id="compItem" style="margin:0 0 6px;color:var(--sec)"></p>
+  <a class="ct" href="#" target="_self" onclick="compartilharLink();return false;"><b>🔗 Link da oferta</b><span>Manda o link desta máquina na Vitrine Armazém.</span></a>
+  <a class="ct" href="#" target="_self" onclick="compartilharFoto();return false;"><b>🖼️ Foto e descrição</b><span>Manda a foto e os dados da máquina, sem link e sem contato da Vitrine. Ideal para repassar a clientes.</span></a>
+  <a class="ct" href="#" target="_self" onclick="abrirImagem();return false;"><b>📲 Imagem para status</b><span>Gera uma imagem pronta para status e stories, com a foto, a descrição e o valor. Com ou sem a marca da Vitrine.</span></a>
+  <button class="fechar" onclick="fecharTudo()">Cancelar</button>
+</div></div>
+
+<div class="fundo" id="pImagem" onclick="if(event.target===this)fecharTudo()"><div class="painel">
+  <h2>Imagem para status</h2>
+  <div class="seg" id="segMarca"><button data-m="1" class="on">Com Vitrine Armazém</button><button data-m="0">Sem marca</button></div>
+  <p id="msgImg" style="margin:6px 0;color:var(--sec);font-size:14px"></p>
+  <canvas id="cvImg" style="display:none;width:auto;max-width:100%;max-height:55vh;margin:6px auto;border-radius:10px"></canvas>
+  <div id="acoesImg" style="display:none">
+    <button class="zap" style="width:100%;margin-top:8px" onclick="compartilharImagem()">📤 Compartilhar imagem</button>
+    <button class="bt2" style="width:100%;margin-top:8px" onclick="baixarImagem()">⬇️ Baixar imagem</button>
+  </div>
+  <button class="fechar" onclick="fecharTudo()">Fechar</button>
+</div></div>
+
+<div class="fundo" id="pInteresse" onclick="if(event.target===this)fecharTudo()"><div class="painel">
+  <div id="intForm">
+    <h2>Tenho interesse</h2>
+    <p id="intItem" style="margin:0 0 6px;color:var(--sec)"></p>
+    <label for="intNome" style="font-size:14px;color:var(--sec)">Seu nome</label>
+    <input id="intNome" class="campo" style="font-size:17px" autocomplete="name">
+    <label for="intTel" style="font-size:14px;color:var(--sec)">Seu WhatsApp (com DDD)</label>
+    <input id="intTel" class="campo" style="font-size:17px" type="tel" inputmode="tel" placeholder="(17) 99999-9999" autocomplete="tel">
+    <label for="intQtd" style="font-size:14px;color:var(--sec)">Quantidade</label>
+    <input id="intQtd" class="campo" style="font-size:17px" inputmode="numeric" value="1">
+    <label for="intObs" style="font-size:14px;color:var(--sec)">Alguma pergunta? (opcional)</label>
+    <input id="intObs" class="campo" style="font-size:17px">
+    <input id="intSite" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+    <button class="zap" id="intBt" style="width:100%;margin-top:8px" onclick="enviarInteresse()">Enviar</button>
+    <button class="fechar" onclick="fecharTudo()">Cancelar</button>
+  </div>
+  <div id="intOk" style="display:none;text-align:center">
+    <h2>✅ Recebido!</h2>
+    <p>O Vitor vai te chamar no WhatsApp para falar sobre o <span id="intOkItem"></span>.</p>
+    <button class="zap" style="width:100%" onclick="chamarAgora()">💬 Chamar agora no WhatsApp</button>
+    <button class="fechar" onclick="fecharTudo()">Fechar</button>
+  </div>
+</div></div>
+
+<div class="fundo" id="pProposta" onclick="if(event.target===this)fecharTudo()"><div class="painel">
+  <h2>Fazer uma proposta</h2>
+  <p id="propItem" style="margin:0 0 6px;color:var(--sec)"></p>
+  <label for="propValor" style="font-size:14px;color:var(--sec)">Quanto você pagaria? (R$)</label>
+  <input id="propValor" class="campo" inputmode="numeric" placeholder="Ex.: 200.000">
+  <button class="zap" style="width:100%;margin-top:8px" onclick="enviarProposta()">💬 Enviar proposta no WhatsApp</button>
+  <button class="fechar" onclick="fecharTudo()">Cancelar</button>
+</div></div>
+
+<div class="fundo" id="pInstalar" onclick="if(event.target===this)fecharInstalar()"><div class="painel inst">
+  <img src="icon-192.png" alt="">
+  <h2>Tenha a Vitrine no seu celular</h2>
+  <p>Coloque a Vitrine Armazém na tela inicial e abra com um toque, igual a um aplicativo. Não ocupa espaço e não precisa de loja.</p>
+  <div id="instConteudo"></div>
+  <label class="nao"><input type="checkbox" id="naoMostrar"> Não mostrar mais</label>
+  <button class="fechar" onclick="fecharInstalar()">Agora não</button>
+</div></div>
+
+<div class="aviso" id="aviso"></div>
+
+<script>
+const URL_DADOS = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+const WHATS = '5517981991295';
+const SITE = 'https://vitrinearmazem.com.br/';
+let itens = [], config = [], procuras = [], vendidos = [], fCat = '', fCond = '', modo = 'vitrine', itemAtual = null;
+
+// Veículos usam a coluna de horímetro como KM
+const ehVeiculo = i => /ve[ií]c/i.test(String(i.cat || ''));
+const horTexto = i => !i.hor ? '' : Number(i.hor).toLocaleString('pt-BR') + (ehVeiculo(i) ? ' km' : ' h');
+const brl = v => v ? v.toLocaleString('pt-BR', {style:'currency', currency:'BRL', maximumFractionDigits:0}) : 'Consulte';
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const hoje = () => { const d = new Date(); d.setHours(0,0,0,0); return d; };
+const data = s => { if (!s) return null; const p = String(s).split('-'); return p.length === 3 ? new Date(+p[0], +p[1]-1, +p[2]) : null; };
+const ddmm = s => { const d = data(s); return d ? String(d.getDate()).padStart(2,'0') + '/' + String(d.getMonth()+1).padStart(2,'0') : ''; };
+const emOferta = i => { const d = data(i.ofertaAte); return !!(d && d >= hoje()); };
+const baixou = i => i.valorAnt > i.valor && i.valor > 0;
+const novo = i => { const d = data(i.data); return !!(d && (hoje() - d) / 864e5 <= 15); };
+const titulo = i => (i.marca ? i.marca + ' ' : '') + i.desc;
+const linkDe = nome => { const c = config.find(x => x.opcao.toLowerCase().indexOf(nome) >= 0); return c ? c.link : '#'; };
+const linhaLink = c => '<a class="ct" href="' + esc(c.link) + '"><b>' + esc(c.opcao) + '</b><span>' + esc(c.desc) + '</span></a>';
+// Fotos da lista em tamanho menor (a grande só na página do item) e carregadas conforme a pessoa rola
+const miniFoto = u => String(u || '').replace(/sz=w\d+/, 'sz=w500');
+const fundoFoto = u => u ? ' data-bg="' + esc(miniFoto(u)) + '"' : '';
+let obsFotos = null;
+function pintarFoto(el) {
+  const u = el.getAttribute('data-bg'); if (!u) return;
+  el.style.backgroundImage = "url('" + u.replace(/'/g, '%27') + "')";
+  el.removeAttribute('data-bg');
+}
+function carregarFotos() {
+  const els = document.querySelectorAll('[data-bg]');
+  if (!('IntersectionObserver' in window)) { els.forEach(pintarFoto); return; }
+  if (!obsFotos) obsFotos = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { obsFotos.unobserve(e.target); pintarFoto(e.target); }
+  }), {rootMargin: '400px'});
+  els.forEach(el => obsFotos.observe(el));
+}
+
+function selo(i) {
+  if (i.disp === 'Reservado') return '<span class="selo s-rs">Reservado</span>';
+  if (emOferta(i)) return '<span class="selo s-of">Oferta da semana</span>';
+  if (baixou(i)) return '<span class="selo s-bx">Baixou!</span>';
+  if (novo(i)) return '<span class="selo s-nv">Novo na vitrine</span>';
+  return '';
+}
+
+function cartao(i) {
+  const sub = [i.ano, i.cond].filter(Boolean).map(esc).join(' · ');
+  return '<button class="card" onclick="abrirItem(' + esc(JSON.stringify(i.n)) + ')">' +
+    '<div class="ph"' + fundoFoto(i.fotos[0]) + '>' + selo(i) + '</div>' +
+    '<div class="ci"><div class="tit">' + esc(titulo(i)) + '</div><div class="sub">' + sub + '</div>' +
+    (baixou(i) ? '<div class="risc">' + brl(i.valorAnt) + '</div>' : '') +
+    '<div class="preco' + (baixou(i) ? ' bx' : '') + '">' + brl(i.valor) + '</div>' +
+    (i.regiao ? '<div class="loc">📍 ' + esc(i.regiao) + '</div>' : '') + '</div></button>';
+}
+
+function destaque(i) {
+  return '<button class="dest" onclick="abrirItem(' + esc(JSON.stringify(i.n)) + ')"><div class="f"' + fundoFoto(i.fotos[0]) + '></div>' +
+    '<div class="t"><div class="tag">' + (emOferta(i) ? 'Oferta até ' + ddmm(i.ofertaAte) : 'Baixou o preço') + '</div>' +
+    '<div class="nm">' + esc(titulo(i)) + '</div>' +
+    (baixou(i) ? '<div class="risc">' + brl(i.valorAnt) + '</div>' : '') +
+    '<div class="pr">' + brl(i.valor) + '</div></div></button>';
+}
+
+function cartaoProcura(p) {
+  const cond = p.cond === 'Tanto faz' ? 'Novo ou usado' : p.cond;
+  const det = [cond, p.qtd > 1 ? p.qtd + ' unidades' : '', p.regiao].filter(Boolean).map(esc).join(' • ');
+  return '<div class="pcard"><span class="ptag">Procura-se • nº ' + esc(p.n) + '</span>' +
+    '<div class="pdet">' + esc(p.cat) + '</div>' +
+    '<div class="ptit">' + esc((p.marca ? p.marca + ' – ' : '') + p.desc) + '</div>' +
+    '<div class="pdet">' + det + '</div>' +
+    (p.valor > 0 ? '<div class="pago">Paga até ' + brl(p.valor) + '</div>' : '') +
+    '<div class="linha-bt"><a class="zap" href="' + esc(p.link) + '" target="_blank">💬 Tenho esse item</a>' +
+    '<a class="bt2" href="' + esc(linkDe('anunciar')) + '" target="_blank">Cadastrar oferta</a></div></div>';
+}
+
+function montarChips() {
+  const ordem = ['Trator','Colheitadeira','Pulverizador Autopropelido','Implemento','Acessório','Veículos','Outro'];
+  const pos = c => ordem.indexOf(c) < 0 ? 99 : ordem.indexOf(c);
+  const base = modo === 'vitrine' ? itens : procuras;
+  const cats = [...new Set(base.map(i => i.cat).filter(Boolean))].sort((a,b) => pos(a) - pos(b));
+  fCat = '';
+  document.getElementById('chips').innerHTML = '<button class="chip on" data-c="">Todos</button>' +
+    cats.map(c => '<button class="chip" data-c="' + esc(c) + '">' + esc(c) + '</button>').join('');
+}
+
+function trocarModo(m) {
+  modo = m;
+  document.querySelectorAll('#abas button').forEach(b => b.classList.toggle('on', b.dataset.m === m));
+  document.getElementById('busca').placeholder = m === 'vitrine' ? 'Buscar: grade, Valtra, roçadeira' : 'Buscar nas procuras';
+  montarChips(); mostrar(); atualizarVendFixo();
+}
+
+function mostrar() {
+  const q = document.getElementById('busca').value.toLowerCase().trim();
+  const okCond = c => !fCond || c === fCond || (modo === 'procura' && c === 'Tanto faz');
+  const base = modo === 'vitrine' ? itens : procuras;
+  const r = base.filter(i => (!fCat || i.cat === fCat) && okCond(i.cond) &&
+    (!q || (i.marca + ' ' + i.desc + ' ' + i.cat + ' ' + i.regiao).toLowerCase().indexOf(q) >= 0));
+  const lista = document.getElementById('lista');
+  if (modo === 'vitrine') {
+    document.getElementById('cont').textContent = r.length + (r.length === 1 ? ' equipamento' : ' equipamentos');
+    let html = '';
+    const dest = itens.filter(i => emOferta(i) || baixou(i)).sort((a,b) => emOferta(b) - emOferta(a));
+    if (dest.length && !q && !fCat && !fCond) html += '<div class="secao">Destaques</div><div class="faixa">' + dest.map(destaque).join('') + '</div>';
+    html += r.length ? '<div class="secao">Equipamentos</div><div class="grade">' + r.map(cartao).join('') + '</div>' :
+      '<div class="vazio">Nada com esse filtro agora.<br><a href="' + esc(linkDe('encomendar')) + '" target="_blank">Conte o que você procura que a gente encontra</a></div>';
+    lista.innerHTML = html;
+    carregarFotos();
+  } else {
+    document.getElementById('cont').textContent = r.length + (r.length === 1 ? ' procura em aberto' : ' procuras em aberto');
+    lista.innerHTML = '<div class="intro">Aqui reunimos o que nossos parceiros estão procurando. <b>Tem ou sabe quem tem?</b> Toque em "Tenho esse item" e fale direto com a gente.' +
+      '<a class="bt-cheio" style="margin-top:10px" href="' + esc(linkDe('encomendar')) + '" target="_blank">➕ Precisa de algo? Cadastre sua procura</a></div>' +
+      (r.length ? r.map(cartaoProcura).join('') : '<div class="vazio">Nenhuma procura com esse filtro agora.</div>');
+  }
+}
+
+// ---------- Página do item ----------
+function abrirItem(n, semHistorico) {
+  const i = itens.find(x => String(x.n) === String(n));
+  if (!i) return;
+  itemAtual = i;
+  const fotos = i.fotos.length ? i.fotos.map((f, k) => '<img ' + (k ? 'loading="lazy" ' : '') + 'src="' + esc(f) + '" alt="' + esc(titulo(i)) + '">').join('') :
+    '<div style="width:100%;display:flex;align-items:center;justify-content:center;color:var(--sec)">Foto em breve</div>';
+  const ficha = [['Ano', i.ano], ['Condição', i.cond], ['Estado', i.estado && i.estado !== i.cond ? i.estado : ''],
+    [ehVeiculo(i) ? 'KM' : 'Horímetro', horTexto(i)], ['Local', i.regiao], ['Disponível', i.disp]]
+    .filter(x => x[1]).map(x => '<div><small>' + x[0] + '</small><b>' + esc(x[1]) + '</b></div>').join('');
+  document.getElementById('pItem').innerHTML =
+    '<div class="ibar"><button onclick="voltar()">← Voltar</button><span>Vitrine Armazém</span></div><div class="iwrap">' +
+    '<div class="fwrap"><div class="fotos" id="fotos">' + fotos + '</div>' + selo(i) +
+    (i.fotos.length > 1 ? '<span class="fcont" id="fcont">1/' + i.fotos.length + ' ⇆</span>' +
+      '<button class="fseta esq" aria-label="Foto anterior" onclick="passarFoto(-1)">‹</button>' +
+      '<button class="fseta dir" aria-label="Próxima foto" onclick="passarFoto(1)">›</button>' : '') + '</div>' +
+    '<div class="ibody"><div class="cat">' + esc(i.cat) + ' · nº ' + esc(i.n) + '</div><h2>' + esc(titulo(i)) + '</h2>' +
+    (baixou(i) ? '<div class="risc" style="font-size:15px">' + brl(i.valorAnt) + '</div>' : '') +
+    '<div class="ipreco' + (baixou(i) ? ' bx' : '') + '">' + brl(i.valor) + '</div>' +
+    (emOferta(i) ? '<div class="ivalidade">🔥 Oferta da semana, válida até ' + ddmm(i.ofertaAte) + '</div>' : '') +
+    '<div class="ficha">' + ficha + '</div></div></div>';
+  document.getElementById('iAcoes').innerHTML = '<div class="in">' +
+    '<button class="zap" onclick="abrirInteresse()">💬 Tenho interesse</button>' +
+    '<button class="bt2" onclick="abrirProposta()">💰 Fazer proposta</button>' +
+    '<button class="bt2" onclick="abrirCompartilhar()">↗ Compartilhar</button></div>';
+  const pi = document.getElementById('pItem');
+  pi.classList.add('aberto'); pi.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+  const fs = document.getElementById('fotos'), fc = document.getElementById('fcont');
+  if (fs && fc) fs.addEventListener('scroll', () => { fc.textContent = (Math.round(fs.scrollLeft / fs.clientWidth) + 1) + '/' + i.fotos.length + ' ⇆'; });
+  if (!semHistorico) history.pushState({item: i.n}, '', '#item-' + i.n);
+}
+function passarFoto(d) {
+  const fs = document.getElementById('fotos'); if (!fs) return;
+  const total = fs.children.length, w = fs.clientWidth;
+  let atual = Math.round(fs.scrollLeft / w) + d;
+  if (atual < 0) atual = total - 1;
+  if (atual >= total) atual = 0;
+  fs.scrollTo({left: atual * w, behavior: 'smooth'});
+}
+document.addEventListener('keydown', e => {
+  if (!itemAtual || document.querySelector('.fundo.aberto')) return;
+  if (e.key === 'ArrowRight') passarFoto(1);
+  if (e.key === 'ArrowLeft') passarFoto(-1);
+});
+function fecharItem() {
+  document.getElementById('pItem').classList.remove('aberto');
+  document.body.style.overflow = '';
+  itemAtual = null;
+}
+function voltar() { if (history.state && history.state.item) history.back(); else { fecharItem(); history.replaceState(null, '', location.pathname); } }
+window.addEventListener('popstate', () => {
+  const m = location.hash.match(/^#item-(.+)$/);
+  if (m) abrirItem(decodeURIComponent(m[1]), true); else fecharItem();
+});
+
+function aviso(t) { const a = document.getElementById('aviso'); a.textContent = t; a.style.display = 'block'; setTimeout(() => a.style.display = 'none', 2500); }
+
+function abrirCompartilhar() {
+  const i = itemAtual; if (!i) return;
+  document.getElementById('compItem').textContent = 'Item nº ' + i.n + ' – ' + titulo(i);
+  abrir('pCompartilhar', true);
+}
+function compartilharFoto() {
+  const i = itemAtual; if (!i) return;
+  fecharPaineis();
+  location.href = 'compartilhar.html?n=' + encodeURIComponent(i.n);
+}
+function compartilharLink() {
+  fecharPaineis();
+  const i = itemAtual; if (!i) return;
+  const url = SITE + '#item-' + i.n;
+  const texto = titulo(i) + ' – ' + brl(i.valor) + ' na Vitrine Armazém';
+  if (navigator.share) { navigator.share({title: titulo(i), text: texto, url: url}).catch(() => {}); return; }
+  window.open('https://wa.me/?text=' + encodeURIComponent(texto + '\n' + url), '_blank');
+}
+
+// ---------- Imagem para status (1080 x 1920), para qualquer pessoa ----------
+// A foto vem do Apps Script já em base64 (compartilharDados), então o próprio celular
+// monta e salva a imagem. Com marca: logo, site e o telefone dos três. Sem marca: só a máquina.
+const TELEFONES_IMG = ['Vitor (17) 98199-1295 · Diego (17) 98138-1850', 'Caio (17) 99707-0188'];
+let imgMarca = true, imgFoto = null, logoImg = null;
+const carregarImg = src => new Promise((ok, erro) => { const im = new Image(); im.onload = () => ok(im); im.onerror = erro; im.src = src; });
+async function fotoDoItem(i) {
+  if (imgFoto && String(imgFoto.n) === String(i.n)) return imgFoto.img;
+  const r = await fetch(URL_DADOS + '?acao=compartilharDados&n=' + encodeURIComponent(i.n), { credentials: 'omit' });
+  const d = await r.json();
+  if (!d.foto) throw new Error('sem foto');
+  const img = await carregarImg('data:' + d.foto.tipo + ';base64,' + d.foto.b64);
+  imgFoto = { n: i.n, img: img };
+  return img;
+}
+async function logoArmazem() {
+  if (logoImg) return logoImg;
+  try { logoImg = await carregarImg('logo.jpg'); } catch (e) { logoImg = null; }
+  return logoImg;
+}
+function quebrarTexto(c, txt, larg) {
+  const linhas = []; let l = '';
+  String(txt).split(/\s+/).forEach(p => {
+    const t = l ? l + ' ' + p : p;
+    if (c.measureText(t).width > larg && l) { linhas.push(l); l = p; } else l = t;
+  });
+  if (l) linhas.push(l);
+  return linhas;
+}
+function desenharImagem(cv, i, foto, logo) {
+  const W = 1080, H = 1920, AZ = '8,38,70';
+  cv.width = W; cv.height = H;
+  const c = cv.getContext('2d');
+  c.fillStyle = '#000'; c.fillRect(0, 0, W, H);
+  const s = Math.max(W / foto.width, H / foto.height), fw = foto.width * s, fh = foto.height * s;
+  c.drawImage(foto, (W - fw) / 2, (H - fh) / 2, fw, fh);
+  c.textBaseline = 'top';
+  // Topo: descrição
+  let g = c.createLinearGradient(0, 0, 0, 640);
+  g.addColorStop(0, 'rgba(' + AZ + ',.94)'); g.addColorStop(.6, 'rgba(' + AZ + ',.65)'); g.addColorStop(1, 'rgba(' + AZ + ',0)');
+  c.fillStyle = g; c.fillRect(0, 0, W, 640);
+  c.fillStyle = '#fff'; c.font = 'bold 76px Arial';
+  let y = 110;
+  quebrarTexto(c, titulo(i), W - 120).slice(0, 3).forEach(l => { c.fillText(l, 60, y); y += 90; });
+  const sub = [i.cond, i.ano ? 'Ano ' + i.ano : '', horTexto(i)].filter(Boolean).join('  ·  ');
+  if (sub) { c.font = '46px Arial'; c.fillStyle = '#D6E4F2'; c.fillText(sub, 60, y + 12); }
+  // Rodapé: valor (e marca, se escolhido)
+  const hb = imgMarca ? 560 : 400;
+  g = c.createLinearGradient(0, H - hb - 220, 0, H);
+  g.addColorStop(0, 'rgba(' + AZ + ',0)'); g.addColorStop(.28, 'rgba(' + AZ + ',.88)'); g.addColorStop(1, 'rgba(' + AZ + ',.97)');
+  c.fillStyle = g; c.fillRect(0, H - hb - 220, W, hb + 220);
+  let yb = H - hb + 20;
+  c.fillStyle = '#fff'; c.font = 'bold 130px Arial';
+  c.fillText(i.valor ? brl(i.valor) : 'Consulte', 60, yb); yb += 160;
+  if (i.regiao) { c.font = '46px Arial'; c.fillStyle = '#D6E4F2'; c.fillText('Local: ' + i.regiao, 60, yb); yb += 72; }
+  if (imgMarca) {
+    c.fillStyle = 'rgba(255,255,255,.35)'; c.fillRect(60, yb, W - 120, 3); yb += 32;
+    if (logo) c.drawImage(logo, 60, yb, 130, 130);
+    const xt = logo ? 220 : 60;
+    c.fillStyle = '#fff'; c.font = 'bold 48px Arial'; c.fillText('Vitrine Armazém', xt, yb + 6);
+    c.font = '40px Arial'; c.fillStyle = '#D6E4F2'; c.fillText('vitrinearmazem.com.br', xt, yb + 66);
+    yb += 158;
+    c.fillStyle = '#fff'; c.font = '36px Arial';
+    TELEFONES_IMG.forEach((t, k) => c.fillText(t, 60, yb + k * 48));
+  }
+  cv.style.display = 'block';
+}
+async function gerarImagem() {
+  const i = itemAtual; if (!i) return;
+  const msg = document.getElementById('msgImg');
+  msg.textContent = 'Montando a imagem…';
+  try {
+    const foto = await fotoDoItem(i);
+    const logo = imgMarca ? await logoArmazem() : null;
+    desenharImagem(document.getElementById('cvImg'), i, foto, logo);
+    msg.textContent = '';
+    document.getElementById('acoesImg').style.display = 'block';
+  } catch (e) {
+    msg.textContent = 'Não consegui montar a imagem desta máquina agora. Tente de novo em instantes.';
+  }
+}
+function abrirImagem() {
+  if (!itemAtual) return;
+  document.getElementById('cvImg').style.display = 'none';
+  document.getElementById('acoesImg').style.display = 'none';
+  abrir('pImagem', true);
+  gerarImagem();
+}
+document.querySelectorAll('#segMarca button').forEach(b => b.addEventListener('click', () => {
+  imgMarca = b.dataset.m === '1';
+  document.querySelectorAll('#segMarca button').forEach(x => x.classList.toggle('on', x === b));
+  gerarImagem();
+}));
+const blobImagem = () => new Promise(ok => document.getElementById('cvImg').toBlob(ok, 'image/jpeg', 0.9));
+async function baixarImagem() {
+  const b = await blobImagem(); if (!b || !itemAtual) return;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(b); a.download = 'vitrine-' + itemAtual.n + (imgMarca ? '' : '-sem-marca') + '.jpg';
+  document.body.appendChild(a); a.click(); a.remove();
+  aviso('✅ Imagem salva no celular');
+}
+async function compartilharImagem() {
+  const b = await blobImagem(); if (!b || !itemAtual) return;
+  const f = new File([b], 'vitrine-' + itemAtual.n + '.jpg', { type: 'image/jpeg' });
+  if (navigator.canShare && navigator.canShare({ files: [f] })) {
+    try { await navigator.share({ files: [f] }); } catch (e) {}
+  } else baixarImagem();
+}
+
+// ---------- Tenho interesse (no próprio site) ----------
+const CHAVE_CONTATO = 'anunciar_vendedor';
+function contatoSalvo() { try { return JSON.parse(localStorage.getItem(CHAVE_CONTATO) || '{}'); } catch (e) { return {}; } }
+function salvarContato(nome, tel) {
+  const c = contatoSalvo(); c.nome = nome; c.tel = tel;
+  try { localStorage.setItem(CHAVE_CONTATO, JSON.stringify(c)); } catch (e) {}
+}
+function abrirInteresse() {
+  const i = itemAtual; if (!i) return;
+  const c = contatoSalvo();
+  document.getElementById('intItem').textContent = 'Item nº ' + i.n + ' – ' + titulo(i) + ' (' + brl(i.valor) + ')';
+  document.getElementById('intNome').value = c.nome || '';
+  document.getElementById('intTel').value = c.tel || '';
+  document.getElementById('intQtd').value = '1';
+  document.getElementById('intObs').value = '';
+  document.getElementById('intForm').style.display = 'block';
+  document.getElementById('intOk').style.display = 'none';
+  abrir('pInteresse', true);
+}
+async function enviarInteresse() {
+  const i = itemAtual; if (!i) return;
+  const nome = document.getElementById('intNome').value.trim();
+  const tel = document.getElementById('intTel').value.trim();
+  if (!nome || tel.replace(/\D/g, '').length < 10) { aviso('Preencha seu nome e o WhatsApp com DDD'); return; }
+  const bt = document.getElementById('intBt');
+  bt.disabled = true; bt.textContent = 'Enviando…';
+  try {
+    const r = await fetch(URL_DADOS, {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify({acao: 'interesse', site: document.getElementById('intSite').value, campos: {
+        'Seu nome': nome, 'Seu WhatsApp (com DDD)': tel, 'Nº da oferta': i.n, 'Produto': titulo(i),
+        'Quantidade': document.getElementById('intQtd').value, 'Observações': document.getElementById('intObs').value
+      }})
+    });
+    const res = await r.json();
+    if (!res.ok) throw new Error(res.erro || 'erro');
+    salvarContato(nome, tel);
+    document.getElementById('intOkItem').textContent = titulo(i);
+    document.getElementById('intForm').style.display = 'none';
+    document.getElementById('intOk').style.display = 'block';
+  } catch (e) {
+    aviso('Não consegui enviar. Tente de novo ou use o WhatsApp.');
+  } finally {
+    bt.disabled = false; bt.textContent = 'Enviar';
+  }
+}
+function chamarAgora() {
+  const i = itemAtual; if (!i) return;
+  const msg = 'Olá Vitor! Tenho interesse no item nº ' + i.n + ' – ' + titulo(i) + ' da Vitrine Armazém.';
+  window.open('https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg), '_blank');
+}
+
+function abrirProposta() {
+  const i = itemAtual; if (!i) return;
+  document.getElementById('propItem').textContent = 'Item nº ' + i.n + ' – ' + titulo(i) + ' (anunciado por ' + brl(i.valor) + ')';
+  document.getElementById('propValor').value = '';
+  abrir('pProposta', true);
+  setTimeout(() => document.getElementById('propValor').focus(), 100);
+}
+document.getElementById('propValor').addEventListener('input', e => {
+  const n = e.target.value.replace(/\D/g, '');
+  e.target.value = n ? Number(n).toLocaleString('pt-BR') : '';
+});
+function enviarProposta() {
+  const i = itemAtual; const v = Number(document.getElementById('propValor').value.replace(/\D/g, ''));
+  if (!i || !v) { aviso('Digite o valor da sua proposta'); return; }
+  const msg = 'Olá Vitor! Vi na Vitrine Armazém e quero fazer uma proposta no item nº ' + i.n + ' – ' + titulo(i) + ': ' + brl(v) + '.';
+  window.open('https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg), '_blank');
+  fecharPaineis();
+}
+
+// ---------- Painéis ----------
+function fecharPaineis() { document.querySelectorAll('.fundo').forEach(p => p.classList.remove('aberto')); }
+function abrir(id, manterItem) { fecharPaineis(); if (!manterItem && itemAtual) voltar(); document.getElementById(id).classList.add('aberto'); }
+function fecharTudo() { fecharPaineis(); }
+
+// ---------- Cabeçalho que encolhe (sem tremer) ----------
+// O cabeçalho fica fixo e só desliza para cima, deixando a busca visível.
+// O espaço dele fica reservado no topo da página, então a página não sobe nem desce
+// quando ele encolhe (era isso que fazia a busca tremer). Ele só muda depois de
+// uma rolagem de verdade (30 px no mesmo sentido), nunca com tremidinha do dedo.
+const cab = document.getElementById('cab');
+function medirCabecalho() {
+  const topo = cab.querySelector('.topo'), busca = cab.querySelector('.busca');
+  const hTopo = topo.offsetHeight + (parseFloat(getComputedStyle(busca).marginTop) || 0);
+  document.documentElement.style.setProperty('--hTopo', hTopo + 'px');
+  document.documentElement.style.setProperty('--hCab', cab.offsetHeight + 'px');
+}
+function medirNav() {
+  const nav = document.querySelector('nav');
+  if (nav) document.documentElement.style.setProperty('--hNav', nav.offsetHeight + 'px');
+}
+medirCabecalho(); medirNav();
+window.addEventListener('resize', () => { medirCabecalho(); medirNav(); });
+if (window.ResizeObserver) new ResizeObserver(medirCabecalho).observe(cab);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(medirCabecalho);
+let ultimoY = window.scrollY, rolado = 0;
+window.addEventListener('scroll', () => {
+  const y = window.scrollY, dy = y - ultimoY;
+  ultimoY = y;
+  atualizarVendFixo();
+  if (y < 40) { cab.classList.remove('mini'); rolado = 0; return; }
+  rolado = (dy > 0) === (rolado > 0) ? rolado + dy : dy;
+  if (rolado > 30 && y > 140) cab.classList.add('mini');
+  else if (rolado < -30) cab.classList.remove('mini');
+}, {passive: true});
+
+// ---------- Filtros ----------
+document.getElementById('chips').addEventListener('click', e => {
+  const b = e.target.closest('.chip'); if (!b) return;
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); fCat = b.dataset.c; mostrar();
+});
+document.getElementById('seg').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('#seg button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); fCond = b.dataset.v; mostrar();
+});
+document.getElementById('busca').addEventListener('input', mostrar);
+document.getElementById('abas').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.getElementById('busca').value = '';
+  trocarModo(b.dataset.m);
+  history.replaceState(null, '', b.dataset.m === 'procura' ? '#procura' : location.pathname);
+});
+
+// ---------- Instalar como app ----------
+let pedidoInstalar = null;
+const jaInstalado = () => window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+const ehIphone = () => /iphone|ipad|ipod/i.test(navigator.userAgent);
+const lerFlag = () => { try { return localStorage.getItem('vitrine_nao_instalar') === '1'; } catch (e) { return false; } };
+const gravarFlag = () => { try { localStorage.setItem('vitrine_nao_instalar', '1'); } catch (e) {} };
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); pedidoInstalar = e; });
+window.addEventListener('appinstalled', () => { gravarFlag(); fecharInstalar(); });
+function abrirInstalar(manual) {
+  const c = document.getElementById('instConteudo');
+  if (jaInstalado()) c.innerHTML = '<p><b>Você já está usando a Vitrine como app.</b> 👍</p>';
+  else if (pedidoInstalar) c.innerHTML = '<button class="bt-cheio" onclick="instalarAgora()">📲 Instalar agora</button>';
+  else if (ehIphone()) c.innerHTML = '<ol><li>Toque no botão <b>Compartilhar</b> (o quadrado com a setinha pra cima)</li><li>Escolha <b>Adicionar à Tela de Início</b></li><li>Toque em <b>Adicionar</b></li></ol>';
+  else c.innerHTML = '<ol><li>Toque nos <b>3 pontinhos ⋮</b> do navegador, lá em cima</li><li>Escolha <b>Instalar app</b> ou <b>Adicionar à tela inicial</b></li><li>Confirme</li></ol>';
+  document.getElementById('naoMostrar').parentElement.style.display = manual ? 'none' : 'flex';
+  fecharPaineis();
+  document.getElementById('pInstalar').classList.add('aberto');
+}
+function fecharInstalar() {
+  if (document.getElementById('naoMostrar').checked) gravarFlag();
+  document.getElementById('pInstalar').classList.remove('aberto');
+}
+async function instalarAgora() {
+  if (!pedidoInstalar) return;
+  pedidoInstalar.prompt(); await pedidoInstalar.userChoice; pedidoInstalar = null; fecharInstalar();
+}
+if (!jaInstalado() && !lerFlag()) setTimeout(() => {
+  if (!document.querySelector('.fundo.aberto') && !itemAtual) abrirInstalar(false);
+}, 8000);
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+
+// ---------- Carregar dados ----------
+// Mostra na hora a vitrine da última visita (guardada no celular) e atualiza
+// sozinha quando os dados novos chegam. Na primeira visita, espera os dados.
+function prepararDados(d) {
+  itens = d.itens || []; config = d.config || []; procuras = d.procuras || []; vendidos = d.vendidos || [];
+  procuras.sort((a, b) => (Number(b.n) || 0) - (Number(a.n) || 0));
+  itens.sort((a, b) => String(b.data || '').localeCompare(String(a.data || '')) || (Number(b.n) || 0) - (Number(a.n) || 0));
+  document.getElementById('listaAnunciar').innerHTML = config.filter(c => c.grupo === 'Anunciar' && c.link).map(linhaLink).join('');
+  document.getElementById('listaContatos').innerHTML = config.filter(c => c.grupo === 'Contato' && c.link).map(linhaLink).join('');
+  document.getElementById('lnkMapa').href = linkDe('chegar');
+  document.getElementById('lnkVendaRapida').href = 'https://wa.me/' + WHATS + '?text=' +
+    encodeURIComponent('Olá Vitor! Vi a Venda rápida na Vitrine Armazém e quero vender meu equipamento. Segue o que tenho: ');
+  document.querySelectorAll('.painel a').forEach(a => { if (!a.getAttribute('target')) a.setAttribute('target', '_blank'); });
+  montarVendFixo();
+}
+// Faixa fixa "Vendidos recentemente": miniaturas passando devagar (a lista vai duas vezes para emendar sem pulo)
+function montarVendFixo() {
+  const um = vendidos.map(v => '<div class="vfItem"><div class="f" data-bg="' + esc(String(v.foto || '').replace(/sz=w\d+/, 'sz=w200')) + '"><span>Vendido</span></div><p>' +
+    esc((v.marca ? v.marca + ' ' : '') + v.desc) + '</p></div>').join('');
+  document.getElementById('vfFaixa').innerHTML = vendidos.length ? um + um : '';
+  carregarFotos();
+  atualizarVendFixo();
+}
+function atualizarVendFixo() {
+  const tem = vendidos.length > 0 && modo === 'vitrine';
+  document.body.classList.toggle('comVend', tem);
+  document.getElementById('vendFixo').classList.toggle('on', tem && window.scrollY > 200);
+}
+function iniciar(d) {
+  prepararDados(d);
+  trocarModo(location.hash === '#procura' ? 'procura' : 'vitrine');
+  const m = location.hash.match(/^#item-(.+)$/);
+  if (m) { history.replaceState(null, '', location.pathname); abrirItem(decodeURIComponent(m[1])); }
+}
+function atualizarDados(d) {
+  prepararDados(d);
+  mostrar();   // mantém filtros, busca e a aba em que a pessoa está
+}
+const CHAVE_DADOS = 'vitrine_dados_v1';
+let dadosAtuais = '';
+try {
+  const salvo = localStorage.getItem(CHAVE_DADOS);
+  if (salvo) { iniciar(JSON.parse(salvo)); dadosAtuais = salvo; }
+} catch (e) { dadosAtuais = ''; }
+fetch(URL_DADOS + '?formato=json')
+  .then(r => r.text())
+  .then(txt => {
+    const d = JSON.parse(txt);
+    if (txt === dadosAtuais) return;
+    const primeira = !dadosAtuais;
+    dadosAtuais = txt;
+    try { localStorage.setItem(CHAVE_DADOS, txt); } catch (e) {}
+    if (primeira) iniciar(d); else atualizarDados(d);
+  })
+  .catch(() => {
+    if (!dadosAtuais) document.getElementById('lista').innerHTML = '<div class="vazio">Não deu pra carregar a vitrine agora. Atualize a página em instantes.</div>';
+  });
+</script>
+</body>
+</html>
