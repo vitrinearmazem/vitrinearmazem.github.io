@@ -40,6 +40,8 @@
   .ok { text-align:center; padding:24px 12px; }
   .ok h2 { color:var(--verde); }
   .armadilha { position:absolute; left:-9999px; }
+  .procura { background:#FFF8E6; border:1px solid #F0DDAE; color:#5A4632; border-radius:12px; padding:12px 14px; margin-bottom:12px; font-size:15px; line-height:1.4; }
+  .procura b { color:#7A5410; }
 </style>
 </head>
 <body>
@@ -50,6 +52,8 @@
 
 <div class="box" id="tela">
   <a class="voltar" href="/">← Voltar à vitrine</a>
+
+  <div class="procura" id="avisoProcura" style="display:none"></div>
 
   <div class="cartao">
     <h2>Seus dados</h2>
@@ -86,6 +90,9 @@
   const CHAVE = 'anunciar_vendedor';
   let categorias = [];
   let contador = 0;
+  // Veio de um Procura-se da vitrine? (?procura=58&cat=&marca=&desc=)
+  const PQ = new URLSearchParams(location.search);
+  const PROCURA = PQ.get('procura') ? { n: PQ.get('procura'), cat: PQ.get('cat') || '', marca: PQ.get('marca') || '', desc: PQ.get('desc') || '' } : null;
   const fotosPorItem = {}; // id -> [{tipo,b64,url}]
 
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
@@ -154,7 +161,27 @@
     });
     div.querySelector('input[type=file]').addEventListener('change', e => adicionarFotos(id, e.target.files, e.target));
     numerarItens();
+    if (id === 1 && PROCURA) preencherProcura(div);
     if (id > 1) div.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Abre o 1º equipamento já com o que está sendo procurado
+  function preencherProcura(div) {
+    const cat = div.querySelector('.cat');
+    if (PROCURA.cat && [...cat.options].some(o => o.value === PROCURA.cat)) {
+      cat.value = PROCURA.cat;
+      div.querySelector('.campoHor').style.display = usaHorimetro(PROCURA.cat) ? 'block' : 'none';
+    }
+    div.querySelector('.marca').value = PROCURA.marca;
+    div.querySelector('.desc').value = PROCURA.desc;
+  }
+  function mostrarProcura() {
+    if (!PROCURA) return;
+    const a = document.getElementById('avisoProcura');
+    a.innerHTML = '🔎 Você está oferecendo para o <b>Procura-se nº ' + esc(PROCURA.n) + '</b>: ' +
+      esc((PROCURA.marca ? PROCURA.marca + ' ' : '') + PROCURA.desc) +
+      '.<br>Já deixamos o principal preenchido. Confira, complete ano, valor e fotos, e envie.';
+    a.style.display = 'block';
   }
 
   function removerItem(id) {
@@ -220,7 +247,9 @@
       itens.push({
         categoria: g('cat'), condicao: g('cond'), marca: g('marca'), descricao: g('desc'),
         ano: g('ano'), quantidade: g('qtd'), horimetro: g('hor'), estado: g('estado'),
-        valor: g('valor'), menorValor: g('menor'), regiao: g('regiao'), obs: g('obs'),
+        valor: g('valor'), menorValor: g('menor'), regiao: g('regiao'),
+        obs: (PROCURA && !itens.length ? 'Resposta ao Procura-se nº ' + PROCURA.n + (g('obs') ? ' – ' + g('obs') : '') : g('obs')),
+        procura: (PROCURA && !itens.length ? PROCURA.n : ''),
         fotos: fotosPorItem[id].map(f => ({ tipo: f.tipo, b64: f.b64 }))
       });
     }
@@ -253,6 +282,7 @@
   document.getElementById('btAdd').addEventListener('click', adicionarItem);
   document.getElementById('btEnviar').addEventListener('click', enviar);
   carregarVendedor();
+  mostrarProcura();
   fetch(API + '?acao=listasAnunciar', { credentials: 'omit' })
     .then(r => r.json()).then(d => { categorias = d.categorias || []; })
     .catch(() => {})

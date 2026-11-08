@@ -561,7 +561,7 @@ function compartilharLink() {
 // ---------- Imagem para status (1080 x 1920), para qualquer pessoa ----------
 // A foto vem do Apps Script já em base64 (compartilharDados), então o próprio celular
 // monta e salva a imagem. Com marca: logo, site e o telefone dos três. Sem marca: só a máquina.
-const TELEFONES_IMG = ['Vitor (17) 98199-1295 · Diego (17) 98138-1850', 'Caio (17) 99707-0188'];
+const TELEFONES_IMG = ['Vitor (17) 98199-1295 · Diego (17) 98138-1850', 'Caio (17) 98130-5583'];
 let imgMarca = true, imgFoto = null, logoImg = null;
 const carregarImg = src => new Promise((ok, erro) => { const im = new Image(); im.onload = () => ok(im); im.onerror = erro; im.src = src; });
 async function fotoDoItem(i) {
