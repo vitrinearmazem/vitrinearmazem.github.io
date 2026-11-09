@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ordem de faturamento – Armazém do Agro</title>
+<style>
+  body { margin: 0; font-family: Arial, sans-serif; color: #1D2329; background: #FFFFFF; }
+  .caixa { max-width: 420px; margin: 40px auto; padding: 0 18px; text-align: center; }
+  h1 { color: #0E4D8A; font-size: 22px; margin: 10px 0; }
+  p { color: #4B5563; font-size: 15px; line-height: 1.5; }
+  a.botao { display: block; color: #FFFFFF; text-decoration: none; padding: 15px; border-radius: 10px; margin: 12px 0; font-size: 17px; }
+  .azul { background: #0E4D8A; }
+  .verde { background: #1F7A3A; }
+  .erro { color: #991B1B; }
+  .roda { width: 36px; height: 36px; border: 4px solid #DCEBFA; border-top-color: #0E4D8A; border-radius: 50%; margin: 30px auto 10px; animation: gira 1s linear infinite; }
+  @keyframes gira { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="caixa" id="tela">
+  <div class="roda"></div>
+  <h1>Gerando a ordem de faturamento…</h1>
+  <p>Leva alguns segundos. Não feche esta página.</p>
+</div>
+<script>
+  // Página aberta pelo botão "Enviar ao escritório" do app Armazém Gestão.
+  // Chama o script do Armazém por baixo (sem login do Google) e mostra os botões.
+  const SCRIPT = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+  const tela = document.getElementById('tela');
+  const q = new URLSearchParams(location.search);
+  const n = q.get('n') || '';
+  const t = q.get('t') || '';
+  const teste = q.get('teste') === '1';
+
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function erro(msg) {
+    tela.innerHTML = '<h1>Não deu certo</h1><p class="erro">' + esc(msg) + '</p>' +
+      '<a class="botao azul" href="' + esc(location.href) + '">Tentar de novo</a>';
+  }
+
+  if (!n || !t) {
+    erro('Link incompleto. Abra pelo botão Enviar ao escritório do app.');
+  } else {
+    const url = SCRIPT + '?acao=ordemDados&token=' + encodeURIComponent(t) + '&n=' + encodeURIComponent(n) + (teste ? '&teste=1' : '');
+    fetch(url)
+      .then(r => r.json())
+      .then(d => {
+        if (!d.ok) { erro(d.erro || 'Erro desconhecido.'); return; }
+        tela.innerHTML =
+          '<h1>Ordem de faturamento nº ' + esc(d.numero) + ' gerada ✅</h1>' +
+          '<p>Cliente: ' + esc(d.cliente) + '<br>' +
+          (d.teste ? '<b>Modo teste:</b> a venda não foi marcada como enviada.' : 'A venda já ficou marcada como enviada ao escritório.') + '</p>' +
+          '<a class="botao azul" href="' + esc(d.url) + '" target="_blank" rel="noopener">📄 Abrir a ordem</a>' +
+          '<a class="botao verde" href="' + esc(d.zap) + '" target="_blank" rel="noopener">💬 Enviar ao escritório no WhatsApp</a>';
+      })
+      .catch(() => erro('Sem conexão com o sistema. Confira a internet e tente de novo.'));
+  }
+</script>
+</body>
+</html>
