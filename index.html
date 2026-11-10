@@ -138,7 +138,9 @@ a.card,a.dest{text-decoration:none;cursor:pointer}
 .ibar span{font-weight:500;font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:18px}
 .iwrap{max-width:720px;margin:0 auto}
 .fotos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;background:#E6E9E3;aspect-ratio:4/3;position:relative}
-.fotos img{flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.fotos .ft{flex:none;width:100%;height:100%;position:relative;overflow:hidden;scroll-snap-align:start}
+.fotos .ft .bg{position:absolute;inset:-24px;background:center/cover no-repeat;filter:blur(18px) brightness(.8)}
+.fotos .ft img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
 .fwrap{position:relative}
 .fcont{position:absolute;bottom:10px;right:10px;font-size:12px;background:rgba(0,0,0,.55);color:#fff;padding:3px 9px;border-radius:999px}
 .fseta{display:none;position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;background:rgba(0,0,0,.5);color:#fff;font-size:22px;line-height:42px;text-align:center;cursor:pointer;padding:0}
@@ -461,7 +463,8 @@ function abrirItem(n, semHistorico) {
   const i = itens.find(x => String(x.n) === String(n));
   if (!i) return;
   itemAtual = i;
-  const fotos = i.fotos.length ? i.fotos.map((f, k) => '<img ' + (k ? 'loading="lazy" ' : '') + 'src="' + esc(f) + '" alt="' + esc(titulo(i)) + '">').join('') :
+  const fotos = i.fotos.length ? i.fotos.map((f, k) => '<div class="ft"><div class="bg" style="background-image:url(\'' + esc(f) + '\')"></div>' +
+    '<img ' + (k ? 'loading="lazy" ' : '') + 'src="' + esc(f) + '" alt="' + esc(titulo(i)) + '"></div>').join('') :
     '<div style="width:100%;display:flex;align-items:center;justify-content:center;color:var(--sec)">Foto em breve</div>';
   const ficha = [['Ano', i.ano], ['Condição', i.cond], ['Estado', i.estado && i.estado !== i.cond ? i.estado : ''],
     [ehVeiculo(i) ? 'KM' : 'Horímetro', horTexto(i)], ['Local', i.regiao], ['Disponível', i.disp]]
