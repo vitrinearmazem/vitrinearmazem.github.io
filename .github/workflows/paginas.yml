@@ -1,0 +1,41 @@
+# Gera uma página por máquina da vitrine (pasta maquinas/) e atualiza o sitemap.xml.
+# Roda sozinho todo dia às 7h (horário de Brasília) e também pelo botão "Run workflow"
+# (aba Actions → Páginas das máquinas → Run workflow).
+name: Páginas das máquinas
+
+on:
+  schedule:
+    - cron: '0 10 * * *'   # 10h UTC = 7h de Brasília
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paginas-maquinas
+  cancel-in-progress: false
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Gerar as páginas
+        run: node .github/scripts/gerar-paginas.js
+
+      - name: Salvar no site
+        run: |
+          git config user.name "Robô da Vitrine"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A maquinas sitemap.xml
+          if git diff --cached --quiet; then
+            echo "Nada mudou hoje."
+          else
+            git commit -m "Páginas das máquinas atualizadas"
+            git push
+          fi
