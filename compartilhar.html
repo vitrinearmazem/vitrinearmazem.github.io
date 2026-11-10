@@ -4,107 +4,147 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Compartilhar oferta</title>
+<title>Compartilhar oferta – Armazém do Agro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root { --fundo:#ffffff; --texto:#1D2329; --caixa:#F4F6F8; --verde:#1F7A3A; --cinza:#5B6570; }
-  @media (prefers-color-scheme: dark) {
-    :root { --fundo:#121417; --texto:#E8EAED; --caixa:#1E2226; --verde:#2E9E52; --cinza:#9AA3AB; }
-  }
-  body { margin:0; background:var(--fundo); color:var(--texto); font-family:Arial, sans-serif; }
-  .box { max-width:480px; margin:0 auto; padding:16px 12px 32px; }
-  img { width:100%; border-radius:10px; display:block; }
-  pre { white-space:pre-wrap; font-family:Arial, sans-serif; font-size:15px; line-height:1.5;
-        background:var(--caixa); padding:12px; border-radius:10px; margin:12px 0; }
-  button { width:100%; background:var(--verde); color:#fff; border:0; padding:16px; border-radius:10px;
-           font-size:18px; cursor:pointer; }
-  button:disabled { opacity:.5; }
-  #msg { color:var(--cinza); font-size:14px; text-align:center; margin-top:12px; }
-  textarea { position:absolute; left:-9999px; }
-  .voltar { display:inline-block; margin:4px 0 12px; color:var(--cinza); text-decoration:none; font-size:15px; }
+:root{--azul:#1E4E79;--verde:#1F7A3A;--fundo:#F5F6F3;--texto:#1D2329;--sec:#5B6570;--linha:#E1E4E0;--erro:#B3261E}
+*{box-sizing:border-box}
+body{margin:0;font-family:Barlow,Arial,sans-serif;background:var(--fundo);color:var(--texto);font-size:16px}
+header{background:var(--azul);color:#fff;padding:14px 16px}
+header h1{margin:0;font-family:"Barlow Semi Condensed",Arial,sans-serif;font-size:21px;font-weight:600}
+main{max-width:480px;margin:0 auto;padding:14px 14px 32px}
+.modos{display:flex;gap:8px;margin-bottom:12px}
+.modos button{flex:1;font:inherit;font-size:16px;padding:11px 0;border:1px solid var(--azul);border-radius:10px;background:#fff;color:var(--azul);cursor:pointer}
+.modos button[aria-pressed="true"]{background:var(--azul);color:#fff;font-weight:500}
+#foto{display:block;width:100%;border-radius:12px;background:#E8EBE6}
+#semfoto{color:var(--erro);margin:4px 0 10px}
+#txt{white-space:pre-wrap;font-family:inherit;font-size:16px;line-height:1.45;background:#fff;border:1px solid var(--linha);padding:12px 14px;border-radius:12px;margin:12px 0}
+.btn{display:block;width:100%;font:inherit;font-size:18px;font-weight:500;border:0;border-radius:12px;padding:15px;cursor:pointer}
+.btn.principal{background:var(--verde);color:#fff}
+.btn.secundario{background:#fff;color:var(--azul);border:1px solid var(--azul);font-size:16px;padding:12px;margin-top:10px}
+#msg{color:var(--sec);font-size:15px;text-align:center;min-height:1.4em}
+#estado{color:var(--sec);text-align:center;padding:48px 10px}
+#estado.erro{color:var(--erro)}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid #F2B035;outline-offset:2px}
 </style>
 </head>
 <body>
-<div class="box">
-  <a class="voltar" id="voltar" href="/">← Voltar à vitrine</a>
-  <div id="conteudo"><p id="carregando">Carregando oferta…</p></div>
-  <button id="btn" disabled>📤 Compartilhar</button>
-  <p id="msg"></p>
-  <textarea id="copia"></textarea>
-</div>
+<header><h1 id="titulo">Compartilhar oferta</h1></header>
+<main>
+  <p id="estado">Carregando a oferta…</p>
+  <div id="conteudo" hidden>
+    <div class="modos" id="modos" hidden>
+      <button type="button" data-m="completo" aria-pressed="true">Completo</button>
+      <button type="button" data-m="limpo" aria-pressed="false">Limpo (sem contato)</button>
+    </div>
+    <img id="foto" alt="" hidden>
+    <p id="semfoto" hidden>Esta oferta não tem foto.</p>
+    <div id="txt"></div>
+    <button type="button" class="btn principal" id="btnCompartilhar">📤 Compartilhar</button>
+    <button type="button" class="btn secundario" id="btnCopiar">Copiar só o texto</button>
+    <p id="msg" role="status"></p>
+  </div>
+</main>
 
 <script>
-  // Endereço do app da web do Apps Script (o mesmo que o site já usa para a vitrine)
-  const API = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+// Endereço do Apps Script (o mesmo usado no ordem.html)
+const SCRIPT = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
 
-  const n = new URLSearchParams(location.search).get('n');
-  const conteudo = document.getElementById('conteudo');
-  const btn = document.getElementById('btn');
-  const msg = document.getElementById('msg');
-  let dados = null, arquivo = null;
+const q = new URLSearchParams(location.search);
+const N = q.get('n') || '';
+const TOKEN = q.get('t') || '';
+let TEXTOS = {}, MODO = 'limpo', ARQUIVO = null;
 
-  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+const $ = id => document.getElementById(id);
 
-  function copiar() {
-    const t = document.getElementById('copia');
-    t.value = dados.texto;
-    t.select();
-    try { document.execCommand('copy'); return true; } catch (e) { return false; }
-  }
+function erro(txt) {
+  $('estado').textContent = txt;
+  $('estado').className = 'erro';
+  $('estado').hidden = false;
+  $('conteudo').hidden = true;
+}
 
-  async function carregar() {
-    if (!n) { conteudo.innerHTML = '<p>Oferta não informada.</p>'; return; }
-    try {
-      const r = await fetch(API + '?acao=compartilharDados&n=' + encodeURIComponent(n), { credentials: 'omit' });
-      dados = await r.json();
-    } catch (e) {
-      conteudo.innerHTML = '<p>Não consegui carregar a oferta. Tente de novo em instantes.</p>';
+function usar(m) {
+  MODO = m;
+  $('txt').textContent = TEXTOS[m] || '';
+  $('msg').textContent = '';
+  document.querySelectorAll('#modos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.m === m ? 'true' : 'false'));
+}
+
+async function copiarTexto() {
+  const t = TEXTOS[MODO] || '';
+  try { await navigator.clipboard.writeText(t); return true; } catch (e) {}
+  const ta = document.createElement('textarea');
+  ta.value = t; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  let ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+  ta.remove();
+  return ok;
+}
+
+async function compartilhar() {
+  const msg = $('msg');
+  const copiou = await copiarTexto();
+  try {
+    if (ARQUIVO && navigator.canShare && navigator.canShare({ files: [ARQUIVO] })) {
+      await navigator.share({ files: [ARQUIVO], text: TEXTOS[MODO] });
+      msg.textContent = 'Pronto! Se o texto não apareceu junto da foto, é só colar como legenda.';
       return;
     }
-    if (dados.erro) { conteudo.innerHTML = '<p>' + esc(dados.erro) + '</p>'; return; }
-
-    let html = '';
-    if (dados.foto) {
-      html += '<img id="foto" alt="Foto da oferta" src="data:' + dados.foto.tipo + ';base64,' + dados.foto.b64 + '">';
-      const bin = atob(dados.foto.b64);
-      const arr = new Uint8Array(bin.length);
-      for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-      arquivo = new File([arr], 'oferta-' + dados.n + '.jpg', { type: dados.foto.tipo });
+    if (!ARQUIVO && navigator.share) {
+      await navigator.share({ text: TEXTOS[MODO] });
+      msg.textContent = 'Pronto!';
+      return;
     }
-    html += '<pre>' + esc(dados.texto) + '</pre>';
-    conteudo.innerHTML = html;
-    btn.disabled = false;
+    throw new Error('sem compartilhar');
+  } catch (e) {
+    if (e && e.name === 'AbortError') { msg.textContent = ''; return; }
+    msg.innerHTML = (copiou ? '✅ Texto copiado. ' : '') +
+      'Segure o dedo na foto → <b>Compartilhar imagem</b> → WhatsApp, e cole o texto como legenda.';
+  }
+}
+
+async function carregar() {
+  if (!N) return erro('Link incompleto: falta o número da oferta.');
+  $('titulo').textContent = 'Oferta nº ' + N;
+  let d;
+  try {
+    const url = SCRIPT + '?acao=compartilharDados&n=' + encodeURIComponent(N) +
+      (TOKEN ? '&token=' + encodeURIComponent(TOKEN) : '');
+    const r = await fetch(url);
+    d = await r.json();
+  } catch (e) {
+    return erro('Não consegui buscar a oferta. Confira a internet e abra o link de novo.');
+  }
+  if (d.erro) return erro(d.erro);
+
+  TEXTOS = d.textos || { limpo: d.texto || '' };
+  if (TEXTOS.completo) { $('modos').hidden = false; usar('completo'); }
+  else usar('limpo');
+
+  if (d.foto && d.foto.b64) {
+    $('foto').src = 'data:' + d.foto.tipo + ';base64,' + d.foto.b64;
+    $('foto').hidden = false;
+    const bin = atob(d.foto.b64), arr = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+    ARQUIVO = new File([arr], 'oferta-' + N + '.jpg', { type: d.foto.tipo || 'image/jpeg' });
+  } else {
+    $('semfoto').hidden = false;
   }
 
-  btn.addEventListener('click', async () => {
-    try {
-      if (arquivo && navigator.canShare && navigator.canShare({ files: [arquivo] })) {
-        copiar();
-        await navigator.share({ files: [arquivo], text: dados.texto });
-        msg.textContent = 'Pronto!';
-        return;
-      }
-      if (navigator.share) {
-        await navigator.share({ text: dados.texto });
-        msg.textContent = 'Texto enviado. A foto você pode mandar segurando o dedo nela → Compartilhar imagem.';
-        return;
-      }
-      throw new Error('sem compartilhar');
-    } catch (e) {
-      if (e && e.name === 'AbortError') return; // a pessoa cancelou
-      const ok = copiar();
-      msg.innerHTML = (ok ? '✅ Texto copiado. ' : '') +
-        'Agora segure o dedo na foto → <b>Compartilhar imagem</b> → WhatsApp, e cole o texto como legenda.';
-    }
-  });
+  $('estado').hidden = true;
+  $('conteudo').hidden = false;
+}
 
-  // Voltar: se veio da vitrine, volta pra mesma oferta; senão, abre a oferta na vitrine
-  document.getElementById('voltar').addEventListener('click', ev => {
-    ev.preventDefault();
-    if (document.referrer && document.referrer.indexOf(location.host) >= 0 && history.length > 1) history.back();
-    else location.href = '/' + (n ? '#item-' + encodeURIComponent(n) : '');
-  });
+document.querySelectorAll('#modos button').forEach(b => b.addEventListener('click', () => usar(b.dataset.m)));
+$('btnCompartilhar').addEventListener('click', compartilhar);
+$('btnCopiar').addEventListener('click', async () => {
+  $('msg').textContent = (await copiarTexto()) ? '✅ Texto copiado.' : 'Não consegui copiar: segure o dedo no texto e copie.';
+});
 
-  carregar();
+carregar();
 </script>
 </body>
 </html>
