@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Página não encontrada – Vitrine Armazém</title>
+<script>
+// Página de máquina que ainda não foi gerada (anúncio novo, antes das 7h do dia seguinte):
+// abre a máquina direto na vitrine.
+(function () {
+  var m = location.pathname.match(/\/maquinas\/(\d+)-/);
+  if (m) location.replace('/#item-' + m[1]);
+})();
+</script>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#F3F4F1;color:#1D2329;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box}
+a{display:inline-block;margin-top:14px;background:#0E4D8A;color:#fff;text-decoration:none;padding:13px 20px;border-radius:10px;font-weight:bold}
+</style>
+</head>
+<body>
+<div>
+  <h1 style="font-size:22px;margin:0 0 8px">Esta página não existe mais</h1>
+  <p style="margin:0;color:#5B6570">Veja as máquinas disponíveis agora na vitrine.</p>
+  <a href="/">Abrir a Vitrine Armazém</a>
+</div>
+</body>
+</html>
