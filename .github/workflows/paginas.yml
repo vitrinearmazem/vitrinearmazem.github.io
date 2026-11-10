@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Ferramenta de imagens (capas da prévia do link)
+        run: npm install --no-save --no-package-lock sharp@0.33.5
+
       - name: Gerar as páginas
         run: node .github/scripts/gerar-paginas.js
 
