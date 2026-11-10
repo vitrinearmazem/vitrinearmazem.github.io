@@ -1,0 +1,1209 @@
+{
+ "1": {
+  "arquivo": "1-jz-guincho-ajustavel-1200.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 1,
+   "cat": "Implemento",
+   "cond": "Novo",
+   "marca": "JZ",
+   "desc": "Guincho ajustável 1200",
+   "ano": 2025,
+   "estado": "Novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 2790,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1uje5CigPYm868KTgv51KBmf9KSvgar1I&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1E89l7_-NoTcOaDZbHhozLA_DhC2BXTH1&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1QOZTORTdbO9fy17XnrXKKGSGgQCb5XKm&sz=w1200"
+   ],
+   "disp": "2 unidades"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "2": {
+  "arquivo": "2-jacto-pulverizador-condor-800-jp100-com-mangueira-p-catacao.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 2,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Jacto",
+   "desc": "Pulverizador Condor 800 JP100 com mangueira p catação",
+   "ano": 2015,
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 9000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1YQ89WCqICl3VNteum0oWslZghquXbMNh&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1FB-IZhgDySOD7MxuhkAXCLUEL9sXYeAD&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1RbXOaVsoWJELQamGUQ3uyylINfPldGpM&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "3": {
+  "arquivo": "3-asus-sulcador-1-linha.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 3,
+   "cat": "Implemento",
+   "cond": "Novo",
+   "marca": "Asus",
+   "desc": "Sulcador 1 linha",
+   "ano": 2025,
+   "estado": "Novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 2990,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1liR-BVjpew_2zOzfG_Ut_bkW4AUxr3t1&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Xp7Yd8r371NlauLzOnn4BjQk_BMuBZce&sz=w1200",
+    "https://drive.google.com/thumbnail?id=18AtQg9uRJqL9V6OVP2QO8PJW7WKXd8-E&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "5": {
+  "arquivo": "5-baldan-grade-18x28-intermediaria-cri.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 5,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Grade 18x28 intermediária CRI",
+   "ano": 2021,
+   "estado": "Usado",
+   "regiao": "General Salgado",
+   "valor": 26000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Zpv6aD7HT-Lb1Lh5-FkdEf32ukXpZLTF&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1y8Y-Z0lFFP50et6wPR_OUeChX8z82xsE&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1w-5BLi15xASwP9AZyrdnVMBJhvAQF7cB&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "6": {
+  "arquivo": "6-valtra-bm-145.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 6,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "Valtra",
+   "desc": "Bm 145",
+   "ano": 2014,
+   "estado": "Bom",
+   "regiao": "Paraiso",
+   "valor": 235000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Gq9RtzcaRDJZtn_SgraaXjSUTxKFBO6l&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1AIzbT1NIJM2Wcbkur0jJhE09MaOlJmW0&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1aoAB9yJHZcCNt6n_nqh7OwQAWT_9vfLb&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "7": {
+  "arquivo": "7-stara-subsolador-5h-asa-cr-com-discos-corte.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 7,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Stara",
+   "desc": "Subsolador 5h Asa CR / com Discos Corte",
+   "ano": "",
+   "estado": "Semi novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 32900,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1fCoezq5h7KDmxSgHg_fiuxqIUtVMUU2w&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1z9HLk05cFcEZ4Wp399bEwOEfNjOn1eQZ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1djpTPr1psPO0xHGsWfJtWGJZfdGXOSzk&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "8": {
+  "arquivo": "8-asus-pa-traseira-220l.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 8,
+   "cat": "Implemento",
+   "cond": "Novo",
+   "marca": "Asus",
+   "desc": "Pá traseira 220L",
+   "ano": 2026,
+   "estado": "Novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 4990,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1b0UiuCJW8HmikS-Zfuzpdg9-d6-pHGNr&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1rjQfwUGl_kas2RrHVT5dlv-Pd1qP7MBb&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1OzfJcpfgbx2_PJ39j0mtBudMLrG_uq1h&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "9": {
+  "arquivo": "9-kamaq-rocadeira-arrasto-3-30mts.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 9,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Kamaq",
+   "desc": "Roçadeira arrasto 3.30mts",
+   "ano": 2007,
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 9900,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1_PdljEau9L98gpMfMy5AShIkUtGiSI5j&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1PeMkj65VZ1mCopYSTfsdysNIzlKb1-m2&sz=w1200",
+    "https://drive.google.com/thumbnail?id=13ImfJElD8OedcqTPHv9uK33ve02nI-CI&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "11": {
+  "arquivo": "11-new-holland-tm7040-semi-powershift-pneu-radial.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 11,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "New Holland",
+   "desc": "TM7040 Semi PowerShift Pneu Radial",
+   "ano": 2011,
+   "estado": "Usado",
+   "regiao": "Monte Alto / Ribeirão Preto.",
+   "valor": 200000,
+   "hor": 7200,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1wfN3ABFMta-ZD_VGjVpqcsS46wIbsvJJ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1xoqjv19vuXw0rpvobX2StdgSwmsYyRcE&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1p714sInDAOMzjNqk6nwDkAAiLwLk0OzG&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "12": {
+  "arquivo": "12-john-deere-5090e-cabinado-12x12-ps.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 12,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "JOHN DEERE",
+   "desc": "5090E Cabinado 12x12 PS.",
+   "ano": 2022,
+   "estado": "Semi novo",
+   "regiao": "Taquaritinga / Ribeirão Preto.",
+   "valor": 230000,
+   "hor": 2000,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1coKAq45389JbBACS-60GrWphyzg2I7Os&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1QjQU3md-kDQ2NFZBpUD3P0QDW764fgdj&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1NgCdx210HIOorIAEhdNxxUJn05seXi68&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "13": {
+  "arquivo": "13-new-holland-ts110-cj-frontal-concha-e-bag.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 13,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "New Holland",
+   "desc": "TS110 Cj frontal concha e bag",
+   "ano": 2007,
+   "estado": "Usado",
+   "regiao": "Itapolis",
+   "valor": 130000,
+   "hor": 10000,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1dMlPqk8g28uvh_Anlf_pPX0PGDLPyGe6&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1dH0Jw-FhmjbaeDk_Y125ub5e81ZsyxLw&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1WMVzMPqwD4sZ0S1X--KnZwnVl1aeVGxz&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "14": {
+  "arquivo": "14-new-holland-t6-130-kit-planter.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 14,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "New Holland",
+   "desc": "T6.130 kit planter",
+   "ano": 2021,
+   "estado": "Semi novo",
+   "regiao": "Catanduva",
+   "valor": 270000,
+   "hor": 1415,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1-mDc0Y2lc7DaP5pmXgXe1SeqhdqHqswx&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1pkPncPIUB94TCdmZn418HpBSJQAtdKtN&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1wYLE7yCsw7eVS80UZZfm_W8r7wdAplge&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "15": {
+  "arquivo": "15-jacto-pulverizador-arrasto-columbia-ad-18-comando-a-cabo-cap.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 15,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Jacto",
+   "desc": "Pulverizador arrasto Colúmbia AD 18, comando a cabo, capacidade 2.000 litros",
+   "ano": 2014,
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 45000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1e3tHSU1E24xKjXvFB5EP7MHGGjM-H1tX&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Lx6oQukj6csKUD5MK_r9p9g0tKmMrB9e&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Blf-vtIWyef6O2C2yQkr8GlT9eq9uBw6&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "16": {
+  "arquivo": "16-incomagri-nogueira-distribuidor-de-compostos-liquidos-capaci.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 16,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Incomagri Nogueira",
+   "desc": "Distribuidor de compostos líquidos, capacidade 3.800 litros, bomba grande",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 19000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1UH4hVfl_GTm7puudmVeP6IY_LPRR569c&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1vN5sj2VcuiTKGYulCKcPt1z8GNPZ2n5o&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1-fsyUK607eYTCDg4VuXmRpSHip9RtH_2&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "17": {
+  "arquivo": "17-baldan-rocadeira-1-60-central-super-lateral-correia.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 17,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Roçadeira 1,60 central super lateral - correia",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 6000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1EhnxnIMfLV3WKZkIiSwYCRfYAKR3pVFm&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1xi_ku5r1bQ_UyJzMY_XBn400CAIPQTL1&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1dgJy-oCj010sj4uEh1Dekt_LDZEtfXFn&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "18": {
+  "arquivo": "18-menta-picadeira-e-forrageira-de-correia.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 18,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Menta",
+   "desc": "Picadeira e forrageira, de correia",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 5000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1j1gQNK1diZnrv1DJp7hTRzBD5i8L3Ibe&sz=w1200",
+    "https://drive.google.com/thumbnail?id=11iax_J_cIchKN0eu_S1VDQorqtj2-wG2&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1aHPOezlShcxbQO1RqXPnLUbC28YwjQad&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "19": {
+  "arquivo": "19-cremasco-triturador-e-picador.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 19,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Cremasco",
+   "desc": "Triturador e picador",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 1700,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1SHf4yRxz2GvudsIeO3kzt3o_ECobDY2V&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1TqfsMnOrPlcdFuIjJbUj7IupZtlz6GMZ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=163V5v3EMpY9NMn4C8qhZX8YZ2m1pxuI5&sz=w1200"
+   ],
+   "disp": "2 unidades"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "20": {
+  "arquivo": "20-goodyear-pneu-medida-18-4x26-sem-ressolar.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 20,
+   "cat": "Outro",
+   "cond": "Usado",
+   "marca": "Goodyear",
+   "desc": "Pneu medida 18.4x26 sem ressolar",
+   "ano": "",
+   "estado": "Semi novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 2500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=15W1Mf_U6zqGnF6OZVX9ISvBeb_I4znS4&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1tPcFJdLamo6oe9MZfb0ChWYryqnha4fd&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Lp0BksMI__yl3C9Tw2RI73gfjSMUhaFR&sz=w1200"
+   ],
+   "disp": "2 unidades"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "21": {
+  "arquivo": "21-goodyear-pneus-com-rodas-11-2x28-p-linha-mf-50x-pulv-arrasto.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 21,
+   "cat": "Outro",
+   "cond": "Usado",
+   "marca": "Goodyear",
+   "desc": "Pneus com rodas 11.2x28 / P linha MF 50x - Pulv arrasto Jacto",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 4200,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1aRS2l1dDS8ls7qjDx4JxD8yqJuqBKHkZ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1xy3Zat0cUkysjbur24dHqAkkESJZ_Zwb&sz=w1200"
+   ],
+   "disp": "2 unidades"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "22": {
+  "arquivo": "22-agrometal-reservatorio-de-diesel-2-000-litros.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 22,
+   "cat": "Outro",
+   "cond": "Usado",
+   "marca": "Agrometal",
+   "desc": "Reservatorio de diesel 2.000 litros",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 3500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1FtxapYDM-R2e8ILTLkhv9_6e1cErQQ3T&sz=w1200",
+    "https://drive.google.com/thumbnail?id=18HEK80U-P8bmZEodDcZx--ZjrIGdrGLq&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1pkEDdmlUMj1vn3Vjs844MxQjiGAZBP0c&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "23": {
+  "arquivo": "23-guincho-traseiro-700-kg.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 23,
+   "cat": "Implemento",
+   "cond": "Novo",
+   "marca": "",
+   "desc": "Guincho traseiro 700 kg",
+   "ano": 2026,
+   "estado": "Novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 1700,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1M-zp0z19tWQAFrMFNHvDsKGwz8hrnw6O&sz=w1200",
+    "https://drive.google.com/thumbnail?id=13e1-tPhV_qUeF1DxKnR5qQr-uH6yBdrO&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1goDGopjjN7erLbyM0IlWOgV6XsQArZkY&sz=w1200"
+   ],
+   "disp": "4 unidades"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "24": {
+  "arquivo": "24-mf-235-4x2.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 24,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "MF",
+   "desc": "235 4x2",
+   "ano": 1977,
+   "estado": "Usado",
+   "regiao": "Votuporanga",
+   "valor": 42500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=18mZKucY-KXzAsfMwZpsOl06mre7dNgol&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1vpyIr4_nsrskSfYhjhp8NoK5pwqbAQy6&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1B986gYpV_9IHtzfwfPbThDT4AtN7DPwe&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "25": {
+  "arquivo": "25-john-deere-5090e-cabinado-c-cj-frontal-muito-novo.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 25,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "John Deere",
+   "desc": "5090E Cabinado c/ Cj frontal MUITO NOVO",
+   "ano": 2025,
+   "estado": "Semi novo",
+   "regiao": "São José do Rio Preto",
+   "valor": 300000,
+   "hor": 350,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=14xxcHA4vYFVkv1G-E8iibJjpqgYOioLV&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1hyOi-xRFo7Kjs9dId8IIMFStXtFJHnsA&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1scApdzxOrKnfBsQ0WtSOtt5QJRWoC4RF&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "26": {
+  "arquivo": "26-tanque-2-000-litros-de-agua.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 26,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "",
+   "desc": "Tanque 2.000 litros de água",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 5200,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=11FsssVj4QRbz6PE3SsnitJoxnW0C6X8q&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "27": {
+  "arquivo": "27-massey-ferguson-arado-tubular-3-bacias.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 27,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Massey Ferguson",
+   "desc": "Arado tubular 3 bacias",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 2200,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1JtMopY3bmAtSgQuOsI6ZkHWO3xd3zuqS&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "29": {
+  "arquivo": "29-tatu-grade-niveladora-24-discos-de-hidraulico.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 29,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Tatu",
+   "desc": "Grade niveladora 24 discos de hidráulico",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 3800,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1xApPTf6D1Ma5CCKx0_SLzA4zcatoT-2j&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1JtHd7DqSGtVhXtIxKcg6HAqHg2PdCevj&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "30": {
+  "arquivo": "30-hatsuta-tanque-400-litros-com-bomba.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 30,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Hatsuta",
+   "desc": "Tanque 400 litros com bomba",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 5200,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1s1K6rC3ncYc8c6Ppip7nI8BCqPgnqR9l&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "31": {
+  "arquivo": "31-jz-distribuidor-de-sementes-e-adubo-de-disco.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 31,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "JZ",
+   "desc": "Distribuidor de sementes e adubo de disco",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 3000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Jvkusbrw1GjzBXqTNrvj7hyn0wDpTx8o&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "32": {
+  "arquivo": "32-case-puma-140-unico-dono-remap-180cv-pneus-24-5-32.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 32,
+   "cat": "Trator",
+   "cond": "",
+   "marca": "Case",
+   "desc": "PUMA 140 Unico Dono / Remap 180cv / Pneus 24.5.32",
+   "ano": 2021,
+   "estado": "Semi novo",
+   "regiao": "Rio preto",
+   "valor": 320000,
+   "hor": 3700,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=10g0h7y_s3imMhSTvN8sD3uNRokYEPJYp&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1hSh5BL104t5WHJ5xwr4BZ7eS_GRXSiCo&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1GBbLTsRUzxu3LJTPtCSJtQ55rBpkF0ZF&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "34": {
+  "arquivo": "34-new-holland-t7-240-cabinado.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 34,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "New Holland",
+   "desc": "T7.240 cabinado",
+   "ano": 2013,
+   "estado": "Usado",
+   "regiao": "São José do Rio Preto",
+   "valor": 220000,
+   "hor": 9000,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=11x7v6k8Wd8Cpuv8_Gp2D9kbRKDV7vAm8&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1eJUszWx0iQscZjxhJVoCCvCv5TjSL0Rs&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1NIk8jc9x39kdkM8UPAlOf4L52owTbSMg&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "35": {
+  "arquivo": "35-baldan-grade-niveladora-28-discos.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 35,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Grade niveladora 28 discos",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 11000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1eVg2tHkgqpHIGlWQurgC5T3jxFk8uW9v&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1LmSxISffiUIzZwfucle6rQAEMiePR-OA&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "36": {
+  "arquivo": "36-asus-subsolador-hidraulico-com-rodas-5-hastes.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 36,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Asus",
+   "desc": "Subsolador hidráulico com rodas 5 hastes",
+   "ano": 2025,
+   "estado": "Semi novo",
+   "regiao": "Valentim Gentil",
+   "valor": 5000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1IaH-JIY8CCchqnxK66d2AJbPCxGWKJoH&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1ervEieGvPdXCfNVk_g7J5fE5hyIWf9VM&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1SV6VUWWaLKU4o-5wZf1fWxUQIU1d4lQb&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "37": {
+  "arquivo": "37-avare-rocadeira-de-arrasto.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 37,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Avaré",
+   "desc": "Roçadeira de arrasto",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 12000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1RYOZtq7j4H3WDHHAQFBm9LlG6j4Pts1m&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1am3XS4Faio3o_60rtHF0duQ-O5kQNLK2&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1xifTNfFA_82L_EY_wEhQgDnLv0Rgl9Uo&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "38": {
+  "arquivo": "38-leli-churumeira-3-000-litros.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 38,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Leli",
+   "desc": "Churumeira 3.000 litros",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 14000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1bpKlyZK-xuiGVfGPX29ubIZHD3yASirP&sz=w1200",
+    "https://drive.google.com/thumbnail?id=13TxBJDXFMC8oH0e7LFhPVQwUF_RwFp1z&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "39": {
+  "arquivo": "39-baldan-plantadeira-baldan-seha-3000-com-monitor-saframax.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 39,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Plantadeira Baldan Seha 3000 com monitor SafraMax",
+   "ano": 2016,
+   "estado": "Semi novo",
+   "regiao": "Tanabi",
+   "valor": 55000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1aBIo0sDTWZpSDClPzJnD3qJejxfKnf_W&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1h4YUjAyhBpviTxXCEpKzEofymLIRes2A&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1NrKHhmaf7izhL7rX7YRZAtbNeqQmka3x&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "40": {
+  "arquivo": "40-kbm-rip-strip.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 40,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "KBM",
+   "desc": "Rip Strip",
+   "ano": 2024,
+   "estado": "Semi novo",
+   "regiao": "Tanabi",
+   "valor": 90000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1CMq5uROQmSu5g8pnjaxPKWLU2s7CvrMr&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1ZyrCHKHPwDqCP3trWgYprug7BOFHVtRh&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1_Ym0OLqGN_KEcRTj5eIgoVTg-I6M8qf1&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "41": {
+  "arquivo": "41-tatu-grade-roma-de-controle-14x28x270.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 41,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Tatu",
+   "desc": "Grade Roma de Controle 14X28X270",
+   "ano": 2018,
+   "estado": "Semi novo",
+   "regiao": "Valentim gentil",
+   "valor": 28500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1S5YC4nmplp6XvgUBl4_XdrfEJL_F3TIu&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1MeecBRl-BgItAZcmO8mI2eMyUbOIm58-&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "42": {
+  "arquivo": "42-jz-guincho-bag-2-000-kg.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 42,
+   "cat": "Outro",
+   "cond": "Usado",
+   "marca": "JZ",
+   "desc": "Guincho bag 2.000 kg",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Votuporanga",
+   "valor": 18000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=15EEq2XFkmUTsHfjMViQ8XqpR9wcv0Sgq&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1IcXO-Xyd430QSvZRQEgzzcEbWi5K_NT1&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1kIWkiC1BpARMHNkBB_JYugPYWceUoxNq&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "43": {
+  "arquivo": "43-tatu-marchesan-distribuidor-dcco-8000-cardan.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 43,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Tatu Marchesan",
+   "desc": "Distribuidor DCCO 8000 Cardan",
+   "ano": 2022,
+   "estado": "Semi novo",
+   "regiao": "Rio Preto",
+   "valor": 45000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1pEE0HK-0sDrCrnq5XpTJ9P8j2smrWuHW&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1bGzjGnC32Y1PtFKMezPegeIrBllnymeR&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1_QgZC3rsCPY3gFZtOVPCT7M37yNyQw-h&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "44": {
+  "arquivo": "44-tatu-marchesan-plantadeira-pst-plus-7-linhas-mecanica-com-ap.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 44,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Tatu Marchesan",
+   "desc": "Plantadeira PST Plus 7 Linhas Mecânica com aplicador inoculante",
+   "ano": 2017,
+   "estado": "Semi novo",
+   "regiao": "Rio Preto",
+   "valor": 70000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1dZfYKMvJsvF__dKgJslTEVO28OXRk7BG&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1QX13TS7E97hvSPIyOfbkLWVYrFiA-gEK&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1YSM1CHmbL5X9NHAOrKiurATYP2dulRy8&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "47": {
+  "arquivo": "47-casale-colhedora-de-capim-crc-180.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 47,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Casale",
+   "desc": "Colhedora de capim CRC-180",
+   "ano": 2021,
+   "estado": "Semi novo",
+   "regiao": "Rio Preto",
+   "valor": 50000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1P1gfNjsXl1aevg6ZXmzDJHv8urabjTxF&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Oxj5geG7B3OAt-EVOFJVtR0_hbOMFCcp&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1isCKUDV5YrR-pglyhizVEmVQLlY_1RUM&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "48": {
+  "arquivo": "48-mitsubishi-triton-hpe-2-4-4x4-diesel-aut.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 48,
+   "cat": "Veículos",
+   "cond": "Usado",
+   "marca": "Mitsubishi",
+   "desc": "Triton HPE 2.4 4x4 Diesel Aut.",
+   "ano": 2026,
+   "estado": "Semi novo",
+   "regiao": "Rio Preto",
+   "valor": 229900,
+   "hor": 38000,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1FfkUVfYe-uutkfYit1YkQiMtPX2CbmeJ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1pj8L63KmJ2eeGCpiJ1J2JJ50kTH6OZc4&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1s12DeMr19_bo2Fo07NExhrJi76H5dNnm&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "49": {
+  "arquivo": "49-baldan-grade-aradora-22x30-espac-300mm.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 49,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Grade aradora 22x30' espaç. 300mm",
+   "ano": 2024,
+   "estado": "Semi novo",
+   "regiao": "Valentim Gentil",
+   "valor": 50000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Bocr0oJg1a6igPgXtyQQTTApy14WxmX0&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1AWu_Aht3yZkMnsbQpLfInGeDuCRMOIMW&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1u7MCrXjqE6GvsbWA9Jyxzx_M0yrRvqZN&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "50": {
+  "arquivo": "50-miac-colhedora-de-amendoim-double-ii.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 50,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Miac",
+   "desc": "Colhedora de amendoim Double II",
+   "ano": 2004,
+   "estado": "Usado",
+   "regiao": "Itápolis SP",
+   "valor": 45000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Y5kN7qGSGX-5qmxU3ZztyC9gyQQm6dS1&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1rpF4jvvML-s_DylywtLymdZmgn1mautH&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1slWD2jXv_5g6RWCupzxy4_KI10738cR7&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "51": {
+  "arquivo": "51-jan-bazuca-20-000-mil-litros.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 51,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Jan",
+   "desc": "Bazuca 20.000 mil litros",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Itápolis SP",
+   "valor": 45000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1o7LcJuCWUycRd3dVCIiz8HoqaZQQdvns&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "52": {
+  "arquivo": "52-baldan-plantadeira-8-linhas-plantio-direito.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 52,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Plantadeira 8 linhas plantio direito",
+   "ano": 1994,
+   "estado": "Usado",
+   "regiao": "Itápolis SP",
+   "valor": 26000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1qIC4NFuisFVuGrHNXqBPLEIXpRzHXKF1&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1WP-bn2AeAu1EYEJJJxWZnbXRVnvM6nNU&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "53": {
+  "arquivo": "53-ford-caminhao-ford-f-4000-boiadeiro-mwm-229-turbinado.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 53,
+   "cat": "Veículos",
+   "cond": "Usado",
+   "marca": "Ford",
+   "desc": "Caminhão Ford F-4000 boiadeiro MWM 229 turbinado",
+   "ano": 1986,
+   "estado": "Semi novo",
+   "regiao": "Palestina",
+   "valor": 75000,
+   "hor": 272000,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1JeKVA2VyJADSi94QeQOUTMv-d2cQPcLH&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1FVJS8i8CArwGDPyj3byVbFLIgtaX4j18&sz=w1200",
+    "https://drive.google.com/thumbnail?id=10-OYfeHwTyltCz1BDqf2VINvZEluQAdA&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "54": {
+  "arquivo": "54-jumil-plantadeira-2040-2-linhas.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 54,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Jumil",
+   "desc": "Plantadeira 2040 2 linhas",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 6000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1ZRKDOPzj34Xw7uxlxvEqSEJDYByOkzEK&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1eK4h6qn_hpA1jqOQX3HLajE71N57AOU2&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1m4xugaG4OcDz_2iFh_XmDjFJW0sNX3DX&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "55": {
+  "arquivo": "55-ikeda-sulcador-de-mandioca.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 55,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Ikeda",
+   "desc": "Sulcador de mandioca",
+   "ano": "",
+   "estado": "Semi novo",
+   "regiao": "Valentim Gentil",
+   "valor": 12500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1vGuq9YyKSFSXfM38OHORK82L5VDzubDE&sz=w1200",
+    "https://drive.google.com/thumbnail?id=13cc-rKeSG_nFXuEiRxj3nCPHUeceJWj6&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1j6Y3dX_2fR0Ol0Yz9bBPe_FiLr2BRw_u&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "56": {
+  "arquivo": "56-ko-tanque-2-000-litros-bomba-jp-75.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 56,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "KO",
+   "desc": "Tanque 2.000 Litros - Bomba JP-75",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 12000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1qAta5_IpMoGRaQ19yP8-WtPQbdECIYo4&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Otgs7np_hDcdDG8aLQlAHB3coCy_ConK&sz=w1200",
+    "https://drive.google.com/thumbnail?id=12PPz88yFvSO0kFfBCVGN5XN0SD2XvW75&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ },
+ "57": {
+  "arquivo": "57-jan-triton-2-5-metros.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 57,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Jan",
+   "desc": "Triton 2,5 metros",
+   "ano": "",
+   "estado": "Semi novo",
+   "regiao": "Valentim Gentil",
+   "valor": 16500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=18aWZKkHvRiphIm_HD-jrL_gkqs46zmdO&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Q79sIVqq7qOVKKkM4-5mCGfGzXc1vt89&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "atualizado": "2026-11-10"
+ }
+}
