@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0E4D8A">
+<title>Atualizar páginas</title>
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#F3F4F1;color:#1D2329;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;box-sizing:border-box}
+.box{max-width:360px}
+h1{font-size:22px;margin:0 0 10px;color:#0E4D8A}
+p{margin:0 0 18px;color:#5B6570;line-height:1.5}
+button{width:100%;font-size:18px;font-weight:bold;border:0;border-radius:12px;padding:16px;background:#1F7A3A;color:#fff;cursor:pointer}
+#msg{margin-top:16px;min-height:1.5em;font-size:16px}
+.ok{color:#1F7A3A}.erro{color:#B3261E}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Páginas das máquinas</h1>
+  <p>Atualiza agora as páginas de cada máquina no site. Ficam prontas em uns 2 minutos.</p>
+  <button id="bt" type="button">Atualizar agora</button>
+  <div id="msg" role="status"></div>
+</div>
+<script>
+const SCRIPT = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec';
+const K = new URLSearchParams(location.search).get('k') || '';
+const bt = document.getElementById('bt'), msg = document.getElementById('msg');
+async function rodar() {
+  bt.disabled = true; msg.className = ''; msg.textContent = 'Enviando…';
+  try {
+    const r = await fetch(SCRIPT + '?acao=rodarPaginas&k=' + encodeURIComponent(K));
+    const d = await r.json();
+    if (d.ok) { msg.className = 'ok'; msg.textContent = '✅ Pronto! As páginas ficam atualizadas em uns 2 minutos.'; }
+    else { msg.className = 'erro'; msg.textContent = d.erro || 'Não deu certo. Tente de novo.'; }
+  } catch (e) {
+    msg.className = 'erro'; msg.textContent = 'Sem conexão com o sistema. Confira a internet e tente de novo.';
+  }
+  bt.disabled = false;
+}
+bt.addEventListener('click', rodar);
+if (!K) { bt.disabled = true; msg.className = 'erro'; msg.textContent = 'Link incompleto: abra pelo atalho completo.'; }
+</script>
+</body>
+</html>
