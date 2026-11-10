@@ -100,8 +100,10 @@ main{padding:6px 14px 10px;max-width:900px;margin:0 auto}
 @media(min-width:860px){.grade{grid-template-columns:repeat(4,minmax(0,1fr))}}
 a.card,a.dest{text-decoration:none;cursor:pointer}
 .card{background:#fff;border:1px solid var(--linha);border-radius:12px;overflow:hidden;text-align:left;padding:0;color:inherit;display:flex;flex-direction:column}
-.ph{aspect-ratio:1/1;background:#E6E9E3 center/cover no-repeat;position:relative;width:100%}
-.selo{position:absolute;top:7px;left:7px;font-size:11px;font-weight:500;padding:3px 8px;border-radius:999px}
+.ph{aspect-ratio:4/3;background:#E6E9E3;position:relative;width:100%;overflow:hidden}
+.ph .bg{position:absolute;inset:-14px;background:center/cover no-repeat;filter:blur(12px) brightness(.8)}
+.ph .fg{position:absolute;inset:0;background:center/contain no-repeat}
+.selo{position:absolute;z-index:1;top:7px;left:7px;font-size:11px;font-weight:500;padding:3px 8px;border-radius:999px}
 .s-of{background:var(--laranja-cl);color:var(--laranja)}
 .s-bx{background:var(--verde-cl);color:#14532A}
 .s-nv{background:#DCE8F6;color:var(--azul)}
@@ -390,7 +392,7 @@ function selo(i) {
 function cartao(i) {
   const sub = [i.ano, i.cond].filter(Boolean).map(esc).join(' · ');
   return '<a class="card" href="' + esc(paginaDe(i)) + '" onclick="abrirItem(' + esc(JSON.stringify(i.n)) + ');return false">' +
-    '<div class="ph"' + fundoFoto(i.fotos[0]) + '>' + selo(i) + '</div>' +
+    '<div class="ph"><div class="bg"' + fundoFoto(i.fotos[0]) + '></div><div class="fg"' + fundoFoto(i.fotos[0]) + '></div>' + selo(i) + '</div>' +
     '<div class="ci"><div class="tit">' + esc(titulo(i)) + '</div><div class="sub">' + sub + '</div>' +
     (baixou(i) ? '<div class="risc">' + brl(i.valorAnt) + '</div>' : '') +
     '<div class="preco' + (baixou(i) ? ' bx' : '') + '">' + brl(i.valor) + '</div>' +
