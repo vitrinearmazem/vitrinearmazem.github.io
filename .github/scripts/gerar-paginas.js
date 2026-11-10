@@ -6,16 +6,23 @@
 //    até 3 parecidas da mesma categoria e o botão "Encomendar uma parecida".
 //  - Se o nome da máquina mudar, o endereço antigo vira um atalho para o novo.
 //  - Atualiza o sitemap.xml (vitrine + todas as páginas de máquinas).
+//  - Capa para a prévia do link (WhatsApp, Facebook, Google): 1200x630 com a foto INTEIRA
+//    no meio e a própria foto desfocada no fundo, em maquinas/capas/<nº>.jpg
+//    (sem isso o WhatsApp corta a foto). Só refaz quando a foto muda.
 // O controle fica em maquinas/estado.json (não apague).
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+let sharp = null;
+try { sharp = require('sharp'); } catch (e) { console.log('Sem o sharp: as prévias usam a foto original.'); }
 
 const URL_DADOS = 'https://script.google.com/macros/s/AKfycbzX6TfdgbSE6N6R-M7saDM5BScIjwjVEjWdaNIK5jP4ZJbDtTA94IgqaYWDQddXPmjM/exec?formato=json';
 const SITE = 'https://vitrinearmazem.com.br/';
 const RAIZ = path.join(__dirname, '..', '..');
 const PASTA = path.join(RAIZ, 'maquinas');
 const ARQ_ESTADO = path.join(PASTA, 'estado.json');
+const PASTA_CAPAS = path.join(PASTA, 'capas');
 const WHATS = '5517981991295';
 
 // ---------- utilidades ----------
@@ -55,9 +62,11 @@ a{color:var(--azul)}
 .fwrap{margin:10px 16px 0;position:relative}
 .fotos{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:12px;background:#D9DDD6;aspect-ratio:4/3;scrollbar-width:none}
 .fotos::-webkit-scrollbar{display:none}
-.fotos img{flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.fotos .ft{flex:none;width:100%;height:100%;position:relative;overflow:hidden;scroll-snap-align:start}
+.fotos .ft .bg{position:absolute;inset:-24px;background:center/cover no-repeat;filter:blur(18px) brightness(.8)}
+.fotos .ft img{position:relative;display:block;width:100%;height:100%;object-fit:contain}
 .semfoto{width:100%;display:flex;align-items:center;justify-content:center;color:var(--sec)}
-.cinza img{filter:grayscale(1)}
+.cinza .ft{filter:grayscale(1)}
 .cont{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:13px;padding:3px 10px;border-radius:999px}
 .selo{position:absolute;top:12px;left:12px;color:#fff;font-weight:600;font-size:14px;border-radius:6px;padding:5px 12px}
 .selo.vend{background:var(--verde)}.selo.ind{background:#5B6570}.selo.res{background:#B65A0B}
@@ -97,7 +106,7 @@ h1{margin:0;font-size:26px;font-weight:600;line-height:1.15}
 
 const ICONE_ZAP = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.2A8.4 8.4 0 1 1 21 11.5z"></path></svg>';
 
-function cabeca(t, desc, url, foto, ld, indexar) {
+function cabeca(t, desc, url, capa, ld, indexar) {
   return '<!DOCTYPE html>\n<html lang="pt-BR"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
     '<title>' + esc(t) + '</title>' +
@@ -106,7 +115,10 @@ function cabeca(t, desc, url, foto, ld, indexar) {
     '<link rel="canonical" href="' + esc(url) + '">' +
     '<meta property="og:title" content="' + esc(t) + '">' +
     '<meta property="og:description" content="' + esc(desc) + '">' +
-    (foto ? '<meta property="og:image" content="' + esc(foto) + '">' : '<meta property="og:image" content="' + SITE + 'logo-jumil.jpg">') +
+    (capa && capa.url
+      ? '<meta property="og:image" content="' + esc(capa.url) + '">' +
+        (capa.larg ? '<meta property="og:image:width" content="' + capa.larg + '"><meta property="og:image:height" content="' + capa.alt + '">' : '')
+      : '<meta property="og:image" content="' + SITE + 'logo-jumil.jpg">') +
     '<meta property="og:url" content="' + esc(url) + '"><meta property="og:type" content="product">' +
     '<meta property="og:site_name" content="Vitrine Armazém"><meta property="og:locale" content="pt_BR">' +
     '<meta name="theme-color" content="#0E4D8A"><link rel="icon" href="/icon-192.png">' +
@@ -131,7 +143,8 @@ const RODAPE = '<div class="rod">Armazém do Agro · Revenda oficial Jumil<br>Ru
 function blocoFotos(i, selo, cinza) {
   const fotos = (i.fotos || []).filter(Boolean);
   const imgs = fotos.length
-    ? fotos.map((f, k) => '<img ' + (k ? 'loading="lazy" ' : '') + 'src="' + esc(f) + '" alt="' + esc(titulo(i)) + (k ? ' – foto ' + (k + 1) : '') + '">').join('')
+    ? fotos.map((f, k) => '<div class="ft"><div class="bg" style="background-image:url(\'' + esc(f) + '\')"></div>' +
+        '<img ' + (k ? 'loading="lazy" ' : '') + 'src="' + esc(f) + '" alt="' + esc(titulo(i)) + (k ? ' – foto ' + (k + 1) : '') + '"></div>').join('')
     : '<div class="semfoto">Foto em breve</div>';
   return '<div class="fwrap' + (cinza ? ' cinza' : '') + '"><div class="fotos" id="fotos">' + imgs + '</div>' + selo +
     (fotos.length > 1 && !cinza ? '<span class="cont" id="cont">1/' + fotos.length + ' ⇆</span>' : '') + '</div>';
@@ -164,7 +177,7 @@ function textoMaquina(i) {
 }
 
 // ---------- página: máquina disponível ----------
-function paginaDisponivel(i, cfg) {
+function paginaDisponivel(i, cfg, capa) {
   const url = SITE + 'maquinas/' + arquivoDe(i);
   const t = titulo(i);
   const sub = [i.ano, i.cond, i.regiao].filter(Boolean).join(' · ');
@@ -177,7 +190,7 @@ function paginaDisponivel(i, cfg) {
     .filter(x => x[1] !== '' && x[1] != null).map(x => '<div><small>' + x[0] + '</small>' + esc(x[1]) + '</div>').join('');
   const zap = i.link || ('https://wa.me/' + WHATS + '?text=' + encodeURIComponent('Olá Vitor! Vi na Vitrine Armazém o item nº ' + i.n + ' – ' + t + '.'));
 
-  return cabeca(tituloAba, textoMaquina(i).slice(0, 155), url, (i.fotos || [])[0],
+  return cabeca(tituloAba, textoMaquina(i).slice(0, 155), url, capa,
       ldProduto(i, url, reservado ? 'https://schema.org/LimitedAvailability' : 'https://schema.org/InStock'), true) +
     '<div class="trilha"><a href="/">Vitrine</a> › <a href="/#cat-' + encodeURIComponent(i.cat || '') + '">' + esc(i.cat) + '</a> › ' + esc(i.desc) + '</div>' +
     blocoFotos(i, reservado ? '<span class="selo res">Reservado</span>' : '', false) +
@@ -195,7 +208,7 @@ function paginaDisponivel(i, cfg) {
 }
 
 // ---------- página: máquina vendida / indisponível ----------
-function paginaSaiu(i, arquivo, situacao, parecidas, cfg) {
+function paginaSaiu(i, arquivo, situacao, parecidas, cfg, capa) {
   const url = SITE + 'maquinas/' + arquivo;
   const t = titulo(i);
   const vendido = situacao === 'Vendido';
@@ -210,7 +223,7 @@ function paginaSaiu(i, arquivo, situacao, parecidas, cfg) {
 
   return cabeca(t + (vendido ? ' – vendido' : '') + ' | Vitrine Armazém',
       (vendido ? 'Vendido pelo Armazém do Agro. ' : '') + 'Procura um ' + t + ' parecido? O Armazém do Agro encontra para você.', url,
-      (i.fotos || [])[0], ldProduto(i, url, vendido ? 'https://schema.org/SoldOut' : 'https://schema.org/OutOfStock'), true) +
+      capa, ldProduto(i, url, vendido ? 'https://schema.org/SoldOut' : 'https://schema.org/OutOfStock'), true) +
     '<div class="trilha"><a href="/">Vitrine</a> › <a href="/#cat-' + encodeURIComponent(i.cat || '') + '">' + esc(i.cat) + '</a> › ' + esc(i.desc) + '</div>' +
     blocoFotos(i, vendido ? '<span class="selo vend">VENDIDO</span>' : '<span class="selo ind">INDISPONÍVEL</span>', true) +
     '<div class="topo"><h1>' + esc(t) + '</h1><div class="sub">' + esc(sub) + '</div></div>' +
@@ -220,6 +233,33 @@ function paginaSaiu(i, arquivo, situacao, parecidas, cfg) {
     '<div class="par">' + (lista ? '<div class="tt">Parecidas disponíveis agora</div>' + lista : '') +
     '<a href="/#cat-' + encodeURIComponent(i.cat || '') + '" style="font-size:15px;margin-top:4px">Ver ' + esc(todosDa(i.cat)) + ' da vitrine</a></div>' +
     quemVende(cfg) + RODAPE + '</body></html>\n';
+}
+
+// Capa 1200x630 para a prévia do link: foto inteira no meio, a mesma foto desfocada no fundo.
+// Devolve { url, larg, alt }. Se não der (sem foto, sem sharp, foto fora do ar), usa a foto original.
+async function capaDe(n, foto, e) {
+  if (!foto) return null;
+  const original = { url: foto };
+  if (!sharp) return original;
+  const versao = crypto.createHash('md5').update(String(foto)).digest('hex').slice(0, 8);
+  const arq = path.join(PASTA_CAPAS, n + '.jpg');
+  const pronta = { url: SITE + 'maquinas/capas/' + n + '.jpg?v=' + versao, larg: 1200, alt: 630 };
+  if (e && e.capaVersao === versao && fs.existsSync(arq)) return pronta;
+  try {
+    const r = await fetch(foto, { redirect: 'follow' });
+    if (!r.ok) throw new Error('foto ' + r.status);
+    const buf = Buffer.from(await r.arrayBuffer());
+    const fundo = await sharp(buf).rotate().resize(1200, 630, { fit: 'cover' }).blur(28)
+      .modulate({ brightness: 0.75 }).toBuffer();
+    const frente = await sharp(buf).rotate().resize(1200, 630, { fit: 'inside' }).toBuffer();
+    if (!fs.existsSync(PASTA_CAPAS)) fs.mkdirSync(PASTA_CAPAS, { recursive: true });
+    await sharp(fundo).composite([{ input: frente, gravity: 'center' }]).jpeg({ quality: 82 }).toFile(arq);
+    if (e) e.capaVersao = versao;
+    return pronta;
+  } catch (err) {
+    console.log('Capa do nº ' + n + ' não gerada (' + err.message + '); usando a foto original.');
+    return original;
+  }
 }
 
 // Endereço antigo (o nome da máquina mudou): leva para o novo
@@ -259,7 +299,7 @@ async function main() {
   dados.itens.forEach(i => { ativos[String(i.n)] = i; });
 
   // 1) Máquinas na vitrine
-  dados.itens.forEach(i => {
+  for (const i of dados.itens) {
     const n = String(i.n);
     const arq = arquivoDe(i);
     const antigo = estado[n];
@@ -271,34 +311,38 @@ async function main() {
       n: i.n, cat: i.cat, cond: i.cond, marca: i.marca, desc: i.desc, ano: i.ano, estado: i.estado,
       regiao: i.regiao, valor: i.valor, hor: i.hor, fotos: i.fotos, disp: i.disp
     };
-    const html = paginaDisponivel(i, cfg);
+    const marca = { capaVersao: antigo && antigo.capaVersao };
+    const capa = await capaDe(n, (i.fotos || [])[0], marca);
+    const html = paginaDisponivel(i, cfg, capa);
     const caminho = path.join(PASTA, arq);
     const mudou = !fs.existsSync(caminho) || fs.readFileSync(caminho, 'utf8') !== html;
     if (mudou) fs.writeFileSync(caminho, html);
     estado[n] = {
       arquivo: arq, situacao: 'Disponível', dados: dadosItem,
       antigos: (antigo && antigo.antigos) || [],
+      capaVersao: marca.capaVersao,
       atualizado: mudou || !antigo ? hoje : (antigo.atualizado || hoje)
     };
-  });
+  }
 
   // 2) Máquinas que saíram da vitrine
-  Object.keys(estado).forEach(n => {
-    if (ativos[n]) return;
+  for (const n of Object.keys(estado)) {
+    if (ativos[n]) continue;
     const e = estado[n];
     const situacao = saidas[n] === 'Vendido' ? 'Vendido' : 'Indisponível';
     const base = e.dados || {};
     const parecidas = dados.itens.filter(p => p.cat === base.cat)
       .sort((a, b) => Math.abs((a.valor || 0) - (base.valor || 0)) - Math.abs((b.valor || 0) - (base.valor || 0)))
       .slice(0, 3);
-    const html = paginaSaiu(base, e.arquivo, situacao, parecidas, cfg);
+    const capa = await capaDe(n, (base.fotos || [])[0], e);
+    const html = paginaSaiu(base, e.arquivo, situacao, parecidas, cfg, capa);
     const caminho = path.join(PASTA, e.arquivo);
     const mudou = !fs.existsSync(caminho) || fs.readFileSync(caminho, 'utf8') !== html;
     if (mudou) fs.writeFileSync(caminho, html);
     if (e.situacao === 'Disponível') e.saiuEm = hoje;
     if (mudou) e.atualizado = hoje;
     e.situacao = situacao;
-  });
+  }
 
   // 3) Sitemap
   const urls = ['  <url><loc>' + SITE + '</loc><changefreq>daily</changefreq><priority>1.0</priority></url>']
