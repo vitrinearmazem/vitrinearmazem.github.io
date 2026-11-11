@@ -127,7 +127,7 @@
  },
  "7": {
   "arquivo": "7-stara-subsolador-5h-asa-cr-com-discos-corte.html",
-  "situacao": "Disponível",
+  "situacao": "Vendido",
   "dados": {
    "n": 7,
    "cat": "Implemento",
@@ -148,7 +148,8 @@
   },
   "antigos": [],
   "capaVersao": "35b40949",
-  "atualizado": "2026-11-10"
+  "atualizado": "2026-11-11",
+  "saiuEm": "2026-11-11"
  },
  "8": {
   "arquivo": "8-asus-pa-traseira-220l.html",
