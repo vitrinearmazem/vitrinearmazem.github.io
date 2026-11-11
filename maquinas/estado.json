@@ -1,7 +1,7 @@
 {
  "1": {
   "arquivo": "1-jz-guincho-ajustavel-1200.html",
-  "situacao": "Disponível",
+  "situacao": "Vendido",
   "dados": {
    "n": 1,
    "cat": "Implemento",
@@ -22,7 +22,8 @@
   },
   "antigos": [],
   "capaVersao": "ada8b9ad",
-  "atualizado": "2026-11-10"
+  "atualizado": "2026-11-10",
+  "saiuEm": "2026-11-10"
  },
  "2": {
   "arquivo": "2-jacto-pulverizador-condor-800-jp100-com-mangueira-p-catacao.html",
