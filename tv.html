@@ -34,8 +34,6 @@ body{font-family:Barlow,Arial,sans-serif;color:var(--texto)}
 #jumil{background:#fff;border-bottom:5px solid #E30613;padding:14px 40px;display:flex;justify-content:center;align-items:center;gap:26px}
 #jumil .rv{font-family:var(--cond);font-weight:700;font-size:28px;color:#3B4756;letter-spacing:3px}
 #jumil img{height:56px;width:auto;display:block}
-#jumil .slogan{font-size:24px;line-height:1.05;color:#3B4756;border-left:3px solid #E30613;padding-left:14px}
-#jumil .slogan b{display:block}
 
 /* Cotações */
 #cot{background:var(--azulEsc);border-top:6px solid var(--ouro);display:flex;align-items:center;height:62px;overflow:hidden;color:#fff;font-size:26px}
@@ -133,7 +131,6 @@ body{font-family:Barlow,Arial,sans-serif;color:var(--texto)}
   <div id="jumil">
     <span class="rv">REVENDA AUTORIZADA</span>
     <img id="jumilLogo" alt="Jumil" src="jumil-logo.webp">
-    <span class="slogan" id="jumilSlogan">pensou plantio,<b>pensou Jumil</b></span>
   </div>
 
   <div id="cot"><div class="rot">COTAÇÕES</div><div class="trilha"><div class="faixa" id="fxCot"></div></div></div>
@@ -351,7 +348,7 @@ function mostrarTempo() {
 }
 setInterval(() => { if (tempo) { cidadeAtual = (cidadeAtual + 1) % CIDADES.length; mostrarTempo(); } }, 8000);
 
-// ===== Vídeos da pasta "TV Loja – Vídeos" no Drive (sem som) =====
+// ===== Vídeos da TV (copiados da pasta do Drive para tv-videos/ no site; sem som) =====
 let videos = [], vAtual = -1, novaLista = null, slideTimer = null, slideK = 0;
 const video = document.getElementById('video');
 function proximoVideo() {
@@ -402,7 +399,7 @@ addEventListener('click', () => { if (radio.paused) ligarRadio(); });   // se o 
 
 // ===== Logo Jumil =====
 const jl = document.getElementById('jumilLogo');
-jl.addEventListener('error', () => { jl.src = JUMIL_RESERVA; jl.style.height = '62px'; document.getElementById('jumilSlogan').style.display = 'none'; }, { once: true });
+jl.addEventListener('error', () => { jl.src = JUMIL_RESERVA; jl.style.height = '62px'; }, { once: true });
 
 // ===== Começo =====
 (async () => {
