@@ -1258,5 +1258,55 @@
   "antigos": [],
   "capaVersao": "8851a762",
   "atualizado": "2026-11-10"
+ },
+ "59": {
+  "arquivo": "59-kbm-arrancador-de-amendoim-kbm-4l.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 59,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "KBM",
+   "desc": "Arrancador de amendoim KBM 4L",
+   "ano": 2025,
+   "estado": "Semi novo",
+   "regiao": "Tanabi",
+   "valor": 110000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1JlEe9mPws-2SZR9W-6VmZszKqeMTWC_P&sz=w1200",
+    "https://drive.google.com/thumbnail?id=18FGadBGSFhA69M5SxmV_y8rquxUycq23&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1_tDVOnBl5SQVWAAyAKUQfszEBbcN_q1Z&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "e46a8a11",
+  "atualizado": "2026-11-16"
+ },
+ "60": {
+  "arquivo": "60-miac-recolhedora-amendoim-double-master-iii.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 60,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "MIAC",
+   "desc": "Recolhedora amendoim Double Master III",
+   "ano": 2014,
+   "estado": "Usado",
+   "regiao": "Tanabi",
+   "valor": 120000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=10lPKiV0R7rwb8Q7FpCM_Zt9HC8n8Z1dd&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1snxGW2V5h5_lNH7q5TPirlMhjxcJPhFs&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1_dHTI5jBNhpFdSJcGMn_0E_4YP-LDjci&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "81c7482e",
+  "atualizado": "2026-11-16"
  }
 }
