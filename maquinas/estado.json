@@ -1432,5 +1432,105 @@
   "antigos": [],
   "capaVersao": "ae1d78f7",
   "atualizado": "2026-11-16"
+ },
+ "66": {
+  "arquivo": "66-jf-forrageira-ensiladeira-jf-92.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 66,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "JF",
+   "desc": "Forrageira ensiladeira JF-92",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 15000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Ng4B7jBGzYQ6cF6cmGL20ugfhkBRPeW7&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1eB7j9HOYJn7e3XWJJh1WPdAMChWTds_H&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1CL2M4kv8GF5atZlXXuVG-caRhQWLiY9y&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "3c0d8c2a",
+  "atualizado": "2026-11-17"
+ },
+ "67": {
+  "arquivo": "67-baldan-grade-niveladora-28-discos.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 67,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Grade niveladora 28 discos",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Votuporanga",
+   "valor": 11000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1_9r6mruM0UKDHLDK1yChybUsHCO0RxCm&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1R8S3PeOnQ09q7cdmNSBK5CmdB1gPY08c&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1nfgN7exBcEj_X4XSbDbt-3FiCGQX0mUX&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "1810a2e3",
+  "atualizado": "2026-11-17"
+ },
+ "68": {
+  "arquivo": "68-baldan-plaina-dianteira-pca.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 68,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Plaina dianteira PCA",
+   "ano": 2021,
+   "estado": "Novo",
+   "regiao": "Votuporanga",
+   "valor": 6000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1KLdrhZ1LyGy_wCOTLmHBcNl00xJfIVKz&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1RBuT1_9bJlV_CpawCGCYmebLQBkHbImS&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1jz1kBfBY6m_RPNQI41JuE8twwAAiZXoh&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "5d1910de",
+  "atualizado": "2026-11-17"
+ },
+ "69": {
+  "arquivo": "69-casale-vagao-misturador-vertimix-70-com-balanca.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 69,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Casale",
+   "desc": "Vagão misturador Vertimix 70 com balança",
+   "ano": 2019,
+   "estado": "Semi novo",
+   "regiao": "Araçatuba",
+   "valor": 85000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1vC_WJE1pB_MbN9xTarSr4pRe8HgozizE&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1sKnoWFrM36glQOdBTBw997A8CvIb1X0R&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1X4oWqWju85iYiNUu3iMPqN4rLwzr-ct2&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "474f3878",
+  "atualizado": "2026-11-17"
  }
 }
