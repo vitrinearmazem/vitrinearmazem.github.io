@@ -148,7 +148,7 @@
   },
   "antigos": [],
   "capaVersao": "35b40949",
-  "atualizado": "2026-11-11",
+  "atualizado": "2026-11-16",
   "saiuEm": "2026-11-11"
  },
  "8": {
@@ -1307,6 +1307,130 @@
   },
   "antigos": [],
   "capaVersao": "81c7482e",
+  "atualizado": "2026-11-16"
+ },
+ "61": {
+  "arquivo": "61-tatu-rocadeira-1-70-metros-com-roda.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 61,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Tatu",
+   "desc": "Roçadeira 1,70 metros com roda",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 11000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1AnKYfMAH3UMjVpsKVTZGz0piJEokuKKU&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1ArkzG0XYdOnbtlrpxYXqULXaCgB9jyc2&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "334f6bcd",
+  "atualizado": "2026-11-16"
+ },
+ "62": {
+  "arquivo": "62-baldan-rocadeira-1-70-metros.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 62,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Roçadeira 1,70 metros",
+   "ano": 2019,
+   "estado": "Semi novo",
+   "regiao": "Votuporanga",
+   "valor": 11500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1t7jhTA5aefitmbQpx7PeESgHHAsKVhUD&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1ef9KNtAV6BGeCs_2vqIMLPoY43_L5BgF&sz=w1200",
+    "https://drive.google.com/thumbnail?id=16TFzvr-P_WNbj_doRWWG2QHvkXPQsGMA&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "957197e6",
+  "atualizado": "2026-11-16"
+ },
+ "63": {
+  "arquivo": "63-rotativa-central.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 63,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "",
+   "desc": "Rotativa Central",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Valentim Gentil",
+   "valor": 8500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1F1jfOvDOCrg4kX-EGy9OQIW9t7cEq5o3&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1OKYz79McciheljrFIQ2TwFw3O5B0YSJZ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1hgN_OH_abqhe4XxXuttx6-DeuIOiiEem&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "10db0b7d",
+  "atualizado": "2026-11-16"
+ },
+ "64": {
+  "arquivo": "64-jacto-pulverizador-columbia-2000-lts-14-metros-barra-comando.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 64,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Jacto",
+   "desc": "Pulverizador Columbia 2000 lts, 14 metros barra, comando a cabo",
+   "ano": 2004,
+   "estado": "Usado",
+   "regiao": "Votuporanga",
+   "valor": 28000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1ey8783TAVwh03yzprtT4-RWEUWUimJ-Z&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1RGzXzFjo5f2o6PTvnXdThRlYuPakN6Oq&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1i1oboVNuWmABFy5fRSDq7MJyOd7AkJTI&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "4727af66",
+  "atualizado": "2026-11-16"
+ },
+ "65": {
+  "arquivo": "65-tatu-terraceador-20-discos-com-pneus-novos.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 65,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Tatu",
+   "desc": "Terraceador 20 discos com pneus novos",
+   "ano": "",
+   "estado": "Semi novo",
+   "regiao": "Votuporanga",
+   "valor": 40000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=16leexXVQatGoOunaBLKYH06npPHbUmUi&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1BOCdp16-XgS_4voBgVmhJA784rYrKcZl&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1tMuvHJU5eSBkYkOt6H4DG0xvodpzOeIa&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "ae1d78f7",
   "atualizado": "2026-11-16"
  }
 }
