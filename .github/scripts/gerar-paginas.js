@@ -104,10 +104,15 @@ h1{margin:0;font-size:26px;font-weight:600;line-height:1.15}
 :focus-visible{outline:3px solid #F2B035;outline-offset:2px}
 `;
 
+// Google Analytics (mesmo código das páginas principais da vitrine)
+const GA_TAG = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-V9E0Y74FPG"></script>' +
+  "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-V9E0Y74FPG');</script>";
+
 const ICONE_ZAP = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.2A8.4 8.4 0 1 1 21 11.5z"></path></svg>';
 
 function cabeca(t, desc, url, capa, ld, indexar) {
   return '<!DOCTYPE html>\n<html lang="pt-BR"><head><meta charset="utf-8">' +
+    GA_TAG +
     '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">' +
     '<title>' + esc(t) + '</title>' +
     '<meta name="description" content="' + esc(desc) + '">' +
