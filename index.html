@@ -535,6 +535,7 @@ function abrirItem(n, semHistorico) {
   document.body.style.overflow = 'hidden';
   const fs = document.getElementById('fotos'), fc = document.getElementById('fcont');
   if (fs && fc) fs.addEventListener('scroll', () => { fc.textContent = (Math.round(fs.scrollLeft / fs.clientWidth) + 1) + '/' + i.fotos.length + ' ⇆'; });
+  document.title = 'Nº ' + i.n + ' – ' + [i.marca, i.desc].filter(Boolean).join(' ') + ' – Vitrine Armazém';  // Analytics mostra qual máquina foi aberta
   if (!semHistorico) history.pushState({item: i.n}, '', '#item-' + i.n);
 }
 function passarFoto(d) {
@@ -550,12 +551,14 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') passarFoto(1);
   if (e.key === 'ArrowLeft') passarFoto(-1);
 });
+const TITULO_VITRINE = document.title;
 function fecharItem() {
   document.getElementById('pItem').classList.remove('aberto');
+  document.title = TITULO_VITRINE;
   document.body.style.overflow = '';
   itemAtual = null;
 }
-function voltar() { if (history.state && history.state.item) history.back(); else { fecharItem(); history.replaceState(null, '', location.pathname); } }
+function voltar() { document.title = TITULO_VITRINE; if (history.state && history.state.item) history.back(); else { fecharItem(); history.replaceState(null, '', location.pathname); } }
 window.addEventListener('popstate', () => {
   const m = location.hash.match(/^#item-(.+)$/);
   if (m) abrirItem(decodeURIComponent(m[1]), true); else fecharItem();
