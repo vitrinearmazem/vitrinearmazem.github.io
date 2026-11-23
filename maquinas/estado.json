@@ -1582,5 +1582,30 @@
   "antigos": [],
   "capaVersao": "74b836a2",
   "atualizado": "2026-11-23"
+ },
+ "72": {
+  "arquivo": "72-matao-equipamentos-distribuidor-de-calcario-com-esteira-80-c.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 72,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Matão Equipamentos",
+   "desc": "Distribuidor de calcário com esteira 80 cm",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Nhandeara",
+   "valor": 26000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=13HqzT7jBsUOZtHjj08ONOrkz99bUU9f-&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1oRJWFmeFNHK23T86vDzYOSriep2kFtju&sz=w1200",
+    "https://drive.google.com/thumbnail?id=17MIegEvXced0jTnsMq9Xsx_knZ42Nndm&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "ced1019a",
+  "atualizado": "2026-11-23"
  }
 }
