@@ -1557,5 +1557,30 @@
   "antigos": [],
   "capaVersao": "f70fe53f",
   "atualizado": "2026-11-23"
+ },
+ "71": {
+  "arquivo": "71-terris-gps-barra-de-luz-gt-500.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 71,
+   "cat": "Acessório",
+   "cond": "Novo",
+   "marca": "Terris",
+   "desc": "GPS Barra de Luz GT-500",
+   "ano": 2026,
+   "estado": "Novo",
+   "regiao": "Rio Preto",
+   "valor": 8500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=14fc5xnkoTVGhuV-TEBgm22_9661dfDkl&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1wDsg3igGlgLe9PmU3W0iLGtX7T19W7AW&sz=w1200",
+    "https://drive.google.com/thumbnail?id=17CxliG-fYa81OfH8blA7ZWPQJLwUz3Uv&sz=w1200"
+   ],
+   "disp": "2 unidades"
+  },
+  "antigos": [],
+  "capaVersao": "74b836a2",
+  "atualizado": "2026-11-23"
  }
 }
