@@ -148,7 +148,7 @@
   },
   "antigos": [],
   "capaVersao": "35b40949",
-  "atualizado": "2026-11-18",
+  "atualizado": "2026-11-23",
   "saiuEm": "2026-11-11"
  },
  "8": {
@@ -1606,6 +1606,56 @@
   },
   "antigos": [],
   "capaVersao": "ced1019a",
+  "atualizado": "2026-11-23"
+ },
+ "73": {
+  "arquivo": "73-baldan-distribuidor-de-calcario-com-esteira-40-cm.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 73,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "Baldan",
+   "desc": "Distribuidor de calcário com esteira 40 cm",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Nhandeara",
+   "valor": 26000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1AxmdgwfUJJik_URauLA0xMQ7O74NFRXk&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1_L1W2YtgwDzojlDl8p_5IF39x_ANmUvu&sz=w1200",
+    "https://drive.google.com/thumbnail?id=120HnG27QADarm7MxvplnvPqt5iu1bCbt&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "3dfa4db4",
+  "atualizado": "2026-11-23"
+ },
+ "74": {
+  "arquivo": "74-rural-implementos-transbordo-4500-hidraulico-4-5-t.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 74,
+   "cat": "Implemento",
+   "cond": "Novo",
+   "marca": "Rural Implementos",
+   "desc": "Transbordo 4500 hidráulico (4,5 t)",
+   "ano": 2026,
+   "estado": "Novo",
+   "regiao": "Rio Preto",
+   "valor": 40000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1md7Bp0fFx3BxVxRVguGJ5hbpDzxFvmda&sz=w1200",
+    "https://drive.google.com/thumbnail?id=18VpUYx2GcdEVxu9sZIOBz27qPsCCkW2g&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1RILr3ixP_GTaXXMYLhXeN4CjuEh4Sps0&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "740fd561",
   "atualizado": "2026-11-23"
  }
 }
