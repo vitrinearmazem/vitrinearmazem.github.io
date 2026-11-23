@@ -1532,5 +1532,30 @@
   "antigos": [],
   "capaVersao": "474f3878",
   "atualizado": "2026-11-18"
+ },
+ "70": {
+  "arquivo": "70-tanque-1-000-litros-com-pneus-bomba-fmc-e-mangueira-para-cat.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 70,
+   "cat": "Implemento",
+   "cond": "Usado",
+   "marca": "",
+   "desc": "Tanque 1.000 litros com pneus, bomba FMC e mangueira para catação",
+   "ano": "",
+   "estado": "Usado",
+   "regiao": "Potirendaba",
+   "valor": 6500,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1wYkMHAjj9FvDH5e5cnTMforfTc54rWZN&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1AajGag0DD74Ij0YadrraqmbNKhBvsZnq&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1Y8uZ6GmtqyXRJgk-Mbdr9SvE9SsbpBqC&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "f70fe53f",
+  "atualizado": "2026-11-23"
  }
 }
