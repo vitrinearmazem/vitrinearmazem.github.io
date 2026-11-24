@@ -166,7 +166,17 @@ function ldProduto(i, url, disponibilidade) {
     itemCondition: i.cond === 'Novo' ? 'https://schema.org/NewCondition' : 'https://schema.org/UsedCondition',
     offers: {
       '@type': 'Offer', url: url, priceCurrency: 'BRL', availability: disponibilidade,
-      seller: { '@type': 'Organization', name: 'Armazém do Agro' }
+      seller: { '@type': 'Organization', name: 'Armazém do Agro' },
+      // Entrega: o site não envia (retirada ou frete a combinar com o vendedor)
+      shippingDetails: {
+        '@type': 'OfferShippingDetails', doesNotShip: true,
+        shippingDestination: { '@type': 'DefinedRegion', addressCountry: 'BR' }
+      },
+      // Devolução: sem devolução (decisão do Vitor em 24/11/2026)
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy', applicableCountry: 'BR',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted'
+      }
     }
   };
   if (i.marca) o.brand = { '@type': 'Brand', name: i.marca };
