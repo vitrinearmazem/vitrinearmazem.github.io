@@ -1657,5 +1657,30 @@
   "antigos": [],
   "capaVersao": "740fd561",
   "atualizado": "2026-11-24"
+ },
+ "75": {
+  "arquivo": "75-mercedes-benz-caminhao-1113-prancha-8-5-x-2-40-m-motor-om-36.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 75,
+   "cat": "Veículos",
+   "cond": "Usado",
+   "marca": "Mercedes-Benz",
+   "desc": "Caminhão 1113 prancha 8,5 x 2,40 m, motor OM-366 turbo intercooler",
+   "ano": 1976,
+   "estado": "Usado",
+   "regiao": "Bebedouro",
+   "valor": 139900,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1wyNw1B0SGu9Ywo6wk_Nr_0BjgKVdOimq&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1vtZNWg9pqlQ7c94xubTTtqWZhujoGzLr&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1S-lNVjz8RpyJxJKFTCdqfmou4HFvc6DE&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "6e642724",
+  "atualizado": "2026-11-24"
  }
 }
