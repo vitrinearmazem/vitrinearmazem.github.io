@@ -1707,5 +1707,53 @@
   "antigos": [],
   "capaVersao": "3498edf4",
   "atualizado": "2026-11-26"
+ },
+ "77": {
+  "arquivo": "77-galego-fachini-carroceria-bagaceira-lenha-prancha.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 77,
+   "cat": "Outro",
+   "cond": "Usado",
+   "marca": "Galego/Fachini",
+   "desc": "Carroceria Bagaceira/Lenha/Prancha",
+   "ano": 1980,
+   "estado": "Usado",
+   "regiao": "Uchôa",
+   "valor": 7000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1d7rWOQiply8ZAkh5LvSUKBrQHrkbUO5W&sz=w1200"
+   ],
+   "disp": "6 unidades"
+  },
+  "antigos": [],
+  "capaVersao": "f7151874",
+  "atualizado": "2026-11-26"
+ },
+ "78": {
+  "arquivo": "78-catracas-para-instalacao-de-carrocerias-e-baus-de-caminhao-e.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 78,
+   "cat": "Outro",
+   "cond": "Usado",
+   "marca": "",
+   "desc": "Catracas para instalação de carrocerias e baús de caminhão em geral",
+   "ano": 1980,
+   "estado": "Usado",
+   "regiao": "Uchôa",
+   "valor": 12000,
+   "hor": 0,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1Xa4yT8Zm3C_Sj7OE9m8tgfArWYO3VVnJ&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1O3NtvEa7Fr1Ibv__aiHvF0M6zO5kcnNf&sz=w1200",
+    "https://drive.google.com/thumbnail?id=14e-WHK4a91rZ82mDHrjddsmlMuHkde7T&sz=w1200"
+   ],
+   "disp": "4 unidades"
+  },
+  "antigos": [],
+  "capaVersao": "fbdcbe9a",
+  "atualizado": "2026-11-26"
  }
 }
