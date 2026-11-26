@@ -1682,5 +1682,30 @@
   "antigos": [],
   "capaVersao": "6e642724",
   "atualizado": "2026-11-24"
+ },
+ "76": {
+  "arquivo": "76-massey-ferguson-trator-mf-292-cabinado.html",
+  "situacao": "Disponível",
+  "dados": {
+   "n": 76,
+   "cat": "Trator",
+   "cond": "Usado",
+   "marca": "Massey Ferguson",
+   "desc": "Trator MF 292 Cabinado",
+   "ano": 2008,
+   "estado": "Usado",
+   "regiao": "Mato Grosso do Sul",
+   "valor": 140000,
+   "hor": 13900,
+   "fotos": [
+    "https://drive.google.com/thumbnail?id=1l-IzqIAo3tDi9Ne5nU3acTfyM3BwVQ0M&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1h6ysD3RZR4vOKhh5lIornUkJTdX8Snlo&sz=w1200",
+    "https://drive.google.com/thumbnail?id=1IpK1SHCeuVBRPbh5Hi1M4SymCgOAAT7E&sz=w1200"
+   ],
+   "disp": "1 unidade"
+  },
+  "antigos": [],
+  "capaVersao": "3498edf4",
+  "atualizado": "2026-11-26"
  }
 }
